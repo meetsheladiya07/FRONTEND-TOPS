@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata Section -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Block-Level Elements</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:20px;
+        }
+
+        *{
+            box-sizing:border-box;
+        }
+
+        header,
+        nav,
+        main,
+        section,
+        article,
+        aside,
+        footer,
+        div,
+        address,
+        blockquote,
+        pre,
+        figure,
+        details,
+        form,
+        fieldset,
+        table,
+        ul,
+        ol,
+        dl{
+            border:1px solid gray;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        table,th,td{
+            border:1px solid black;
+        }
+
+        th,td{
+            padding:8px;
+            text-align:left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>Header Tag</h1>
+        <p>This is the website header.</p>
+    </header>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- SECTION -->
+        <section>
+            <h2>Section Tag</h2>
+            <p>A section groups related content.</p>
+        </section>
+
+        <!-- ARTICLE -->
+        <article>
+            <h2>Article Tag</h2>
+            <p>This represents an independent article or blog post.</p>
+        </article>
+
+        <!-- ASIDE -->
+        <aside>
+            <h3>Aside Tag</h3>
+            <p>Sidebar or related information.</p>
+        </aside>
+
+        <!-- DIV -->
+        <div>
+            <h3>Div Tag</h3>
+            <p>Generic block container.</p>
+        </div>
+
+        <!-- HEADINGS -->
+        <h1>Heading H1</h1>
+        <h2>Heading H2</h2>
+        <h3>Heading H3</h3>
+        <h4>Heading H4</h4>
+        <h5>Heading H5</h5>
+        <h6>Heading H6</h6>
+
+        <!-- PARAGRAPH -->
+        <p>
+            This is a paragraph using the p tag.
+        </p>
+
+        <!-- ADDRESS -->
+        <address>
+            Fortune Food Machine Pvt. Ltd.<br>
+            Rajkot, Gujarat
+        </address>
+
+        <!-- BLOCKQUOTE -->
+        <blockquote>
+            "Success is the sum of small efforts repeated day after day."
+        </blockquote>
+
+        <!-- PREFORMATTED TEXT -->
+        <pre>
+Name : Meet
+City : Rajkot
+Language : HTML
+        </pre>
+
+        <!-- HORIZONTAL LINE -->
+        <hr>
+
+        <!-- FIGURE -->
+        <figure>
+            <img src="https://via.placeholder.com/300x150"
+                 alt="Sample Image">
+
+            <figcaption>
+                This is a figure caption.
+            </figcaption>
+        </figure>
+
+        <!-- DETAILS -->
+        <details>
+            <summary>Click to Expand</summary>
+
+            HTML Details tag creates expandable content.
+        </details>
+
+        <!-- DIALOG (Requires JavaScript to open) -->
+        <dialog open>
+            This is a Dialog Element.
+        </dialog>
+
+        <!-- FORM -->
+        <form>
+
+            <fieldset>
+
+                <legend>User Registration</legend>
+
+                <label>Name</label>
+                <input type="text">
+
+                <br><br>
+
+                <label>Email</label>
+                <input type="email">
+
+                <br><br>
+
+                <button>Submit</button>
+
+            </fieldset>
+
+        </form>
+
+        <!-- TABLE -->
+        <table>
+
+            <caption>
+                Student Table
+            </caption>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>Meet</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Rahul</td>
+                </tr>
+
+            </tbody>
+
+            <tfoot>
+
+                <tr>
+                    <td colspan="2">
+                        End of Table
+                    </td>
+                </tr>
+
+            </tfoot>
+
+        </table>
+
+        <!-- UNORDERED LIST -->
+        <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Orange</li>
+        </ul>
+
+        <!-- ORDERED LIST -->
+        <ol>
+            <li>Wake Up</li>
+            <li>Study</li>
+            <li>Practice</li>
+        </ol>
+
+        <!-- DESCRIPTION LIST -->
+        <dl>
+
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+
+        </dl>
+
+        <!-- MENU -->
+        <menu>
+            <li>Save</li>
+            <li>Edit</li>
+            <li>Delete</li>
+        </menu>
+
+        <!-- SEARCH (HTML element, limited browser support) -->
+        <search>
+            <form>
+                <input type="search" placeholder="Search">
+                <button>Search</button>
+            </form>
+        </search>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 HTML Block Tags Demo</p>
+    </footer>
+
+</body>
+</html>
