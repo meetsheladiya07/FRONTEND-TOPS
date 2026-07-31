@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center">
+        <form>
+            <caption><h1>Sign UP</h1></caption>
+            <tr>
+                <td><label>First, Last Name*:</label></td>
+                <td><input type="text" pattern="[A-Za-z]{2,9}" required></td>
+                <td><input type="text" pattern="[A-Za-z]{2,9}" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Organization:</label></td>
+                <td colspan="2"><input type="text" required></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><label>Email Address*:</label></td>
+                <td colspan="2"><input type="email" pattern="[a-z0-9]+'@'+[a-z]+'.'+[a-z]{2,3}$" width="300" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Work Phone:</label></td>
+                <td colspan="2"><input type="tel" pattern="[0-9]{10}" maxlength="10" required></td>
+            </tr>
+            <tr>
+                <td><label>Home Phone:</label></td>
+                <td colspan="2"><input type="tel" pattern="[0-9]{10}" maxlength="10" required></td>
+            </tr>
+            <tr>
+                <td><label>Cell Phone:</label></td>
+                <td colspan="2"><input type="tel" pattern="[0-9]{10}" maxlength="10" required></td>
+            </tr>
+            
+            <tr>
+                <td><label>Fax:</label></td>
+                <td colspan="2"><input type="tel" pattern="[0-9]{10,15}" maxlength="15"  required></td>
+            </tr>
+
+            <tr>
+                <td><label>Address 1*:</label></td>
+                <td colspan="2"><textarea name="" id="" cols="45" rows="1"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label>Address 2:</label></td>
+                <td colspan="2"><textarea name="" id="" cols="45" rows="1"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label>City*:</label></td>
+                <td colspan="2"><input type="text"" required></td>
+            </tr>
+
+            <tr>
+                <td><label>State/Province*:</label></td>
+                <td colspan="2"><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Zip/Postal Code*:</label></td>
+                <td colspan="2"><input type="text" pattern="[0-9]{6}" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Country*:</label></td>
+                <td colspan="2"><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td><label>*- Required Fields</label></td>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

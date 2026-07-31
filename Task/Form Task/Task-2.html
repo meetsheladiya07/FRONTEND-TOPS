@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <form>
+            <tr>
+                <td><label>First Name</label></td>
+                <td><input type="text" pattern="[A-Za-z]{2,9}" required></td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+
+            <tr>
+                <td><label>Last Name</label></td>
+                <td><input type="text" pattern="[A-Za-z]{2,9}" required></td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+
+            <tr>
+                <td><label>Email ID</label></td>
+                <td><input type="email" pattern="[a-z0-9]+'@'+[a-z]+'.'+[a-z]{2,3}$" required></td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+
+            <tr>
+                <td><label>Mobile Number</label></td>
+                <td><input type="tel" pattern="[0-9]{10}" maxlength="10" required></td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+
+            <tr>
+                <td><label>Gender</label></td>
+                <td>
+                    <input type="radio" name="gender" required> Male
+                    <input type="radio" name="gender" required> Female
+                </td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+
+            <tr>
+                <td><label>Date of Birth(DOB)</label></td>
+                <td><input type="date" required></td>
+            </tr>
+                        
+            <tr><td colspan="3">&nbsp;</td></tr>
+
+            <tr>
+                <td><label>Address</label></td>
+                <td><textarea name="" id="" cols="50" rows="10"></textarea></td>    
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr>
+                <td><label>City</label></td>
+                <td><input type="text" pattern="[A-Za-z]{2,9}" required></td>                       
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr>
+                <td><label>Pincode</label></td>
+                <td><input type="text" pattern="[0-9]{6}" required></td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr>
+                <td><label>State</label></td>
+                <td><input type="text" pattern="[A-Za-z]{2,13}" required></td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr>
+                <td><label>Country</label></td>
+                <td><input type="text" pattern="[A-Za-z]{2,13}" required></td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+
+            <tr>
+                <td><label>Hobbies</label></td>
+                <td>
+                    <input type="checkbox" name="hobbies"> Drawing  
+                    <input type="checkbox" name="hobbies"> Singing
+                    <input type="checkbox" name="hobbies"> Dancing
+                    <input type="checkbox" name="hobbies"> Sketching </td>
+
+            </tr>
+            <tr>
+
+                <td></td>
+                <td>    
+                    <input type="checkbox" name="hobbies"> other
+                    <input type="text" pattern="[A-Za-z]{2,9}" required>
+                </td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr>
+                <td><label>Qualification</label></td>
+                <td><input type="checkbox" name="qualification"> High School(10th)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="qualification"> Higher School(12th)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="qualification"> Graduation(Bachelors)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="qualification"> Post Graduation(Masters)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="qualification"> PhD</td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr>
+                <td><label>Course <br> Applied for</label></td>
+                <td>
+                    <input type="checkbox" name="course">BCA(Bachelor of Computer Application)<br>
+                    <input type="checkbox" name="course">B.Com(Bachelor of Commerce)<br>
+                    <input type="checkbox" name="course">B.Sc(Bachelor of Science)<br>
+                    <input type="checkbox" name="course">BA(Bachelor of Arts)<br>
+                    <input type="checkbox" name="course">MCA(Master of Computer Application)<br>
+                    <input type="checkbox" name="course">M.Com(Master of Commerce)<br>
+                    <input type="checkbox" name="course">M.Sc(Master of Science)<br>
+                    <input type="checkbox" name="course">MA(Master of Arts)<br>
+                </td>
+            </tr>
+
+            <tr><td colspan="3">&nbsp;</td></tr>
+            
+            <tr>
+            <td colspan="2" align="center">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                
+            </td>
+        </tr>
+        </form>
+        
+    </table>
+</body>
+</html>
