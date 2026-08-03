@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Write CSS selectors to style all elements with the class 'playlist-item' (for a Spotify playlist page) to have a dark background and white text. Then, add a rule to highlight the currently playing song with a different color using a unique id selector.-->
+    <title>Spotify Playlist</title>
+
+    <style>
+
+        .playlist-item{
+            background-color:#1e1e1e;
+            color:white;
+            padding:12px;
+            margin:8px;
+        }
+
+        #now-playing{
+            background-color:#1db954;
+            color:black;
+            font-weight:bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="playlist-item">Believer</div>
+
+<div class="playlist-item">Perfect</div>
+
+<div class="playlist-item" id="now-playing">
+    Shape of You ▶
+</div>
+
+<div class="playlist-item">
+    Let Me Love You
+</div>
+
+</body>
+</html>

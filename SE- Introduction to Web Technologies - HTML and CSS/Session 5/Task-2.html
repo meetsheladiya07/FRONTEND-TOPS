@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Build a Myntra-like offer banner using internal CSS (inside a <style> tag) to set a custom font family, text color, and background color for the banner text.-->
+    <title>Myntra Offer Banner</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .banner {
+            width: 500px;
+            margin: 30px auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            text-align: center;
+        }
+
+        .banner img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Internal CSS for banner text */
+        .offer-text {
+            background-color: #fff3cd;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 15px;
+        }
+        #div{
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="banner">
+
+        <!-- Replace with your image path -->
+        <img src="/Images/img2.png" alt="Myntra Month End Sale" width="500" height="300">
+
+        <div class="offer-text">
+            Flat 40–80% OFF | Sale Starts at Midnight
+        </div>
+
+        <div id="div">
+            Catch The Opening Hour Deals! | Shop Now
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
