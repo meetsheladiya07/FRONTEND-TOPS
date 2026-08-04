@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Tasks</title>
+</head>
+<body>
+
+    <!-- ================================================= -->
+    <!-- Task 1, 2 & 3 : Flipkart Product Review Form -->
+    <!-- ================================================= -->
+
+    <h2>Flipkart Product Review Form</h2>
+
+    <!--
+        Task 3:
+        method="POST" sends form data using HTTP POST request.
+        Open Browser Developer Tools (F12) → Network tab
+        Submit the form and check the POST request payload.
+    -->
+
+    <form action="#" method="POST">
+
+        <!-- Username -->
+        <label for="username">Username:</label><br>
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+            required>
+        <br><br>
+
+        <!-- Rating -->
+        <label for="rating">Rating:</label><br>
+        <select id="rating" name="rating" required>
+
+            <!-- Default unselectable option -->
+            <option value="" selected disabled>Select Rating</option>
+
+            <option value="1">1 ★</option>
+            <option value="2">2 ★★</option>
+            <option value="3">3 ★★★</option>
+            <option value="4">4 ★★★★</option>
+            <option value="5">5 ★★★★★</option>
+
+        </select>
+        <br><br>
+
+        <!-- Review -->
+        <label for="review">Review Message:</label><br>
+        <textarea
+            id="review"
+            name="review"
+            rows="5"
+            cols="40"
+            placeholder="Write your review..."
+            minlength="20"
+            required></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Submit Review">
+
+    </form>
+
+</body>
+</html>
