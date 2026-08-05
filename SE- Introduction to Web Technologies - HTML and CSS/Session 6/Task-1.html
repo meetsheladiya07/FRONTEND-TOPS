@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zomato Card</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#f5f5f5;
+        }
+
+        .card{
+            width:300px;
+            margin:40px auto;
+            border:2px solid #ccc;
+            border-radius:10px;
+            background:white;
+        }
+
+        /*
+        Reusable spacing class.
+        Instead of writing margin-bottom and padding
+        in every section, we use one class.
+        This improves maintainability because if spacing
+        needs to change, we edit only this class.
+        */
+        .spacing{
+            margin-bottom:10px;
+            padding:10px;
+        }
+
+        .name{
+            border:1px solid #ddd;
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        .cuisine{
+            border:1px solid #ddd;
+        }
+
+        .rating{
+            border:1px solid #ddd;
+            background:#28a745;
+            color:white;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="name spacing">
+        Spice Villa
+    </div>
+
+    <div class="cuisine spacing">
+        Cuisine: North Indian, Chinese
+    </div>
+
+    <div class="rating spacing">
+        &#11088; 4.5 / 5
+    </div>
+
+</div>
+
+</body>
+</html>

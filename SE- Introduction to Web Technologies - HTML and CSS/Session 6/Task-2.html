@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flipkart Product Tile</title>
+
+<style>
+
+body{
+    font-family:Arial;
+}
+
+.product{
+    width:300px;
+    margin:50px auto;
+    border:1px solid gray;
+    padding:15px;
+    text-align:center;
+}
+
+img{
+    display:block;
+    margin:auto;
+}
+
+.product-name{
+    display:block;
+    font-size:20px;
+    margin-top:10px;
+}
+
+.price{
+    display:inline-block;
+    margin-top:10px;
+    background:green;
+    color:white;
+    padding:5px 10px;
+}
+
+/* Add this class to hide the price */
+.hide-price .price{
+    display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Remove hide-price class to show price -->
+
+<div class="product hide-price">
+
+<img src="/Images/img1.jpg" alt="Product Image" width="300" height="200">
+
+<span class="product-name">
+Samsung Galaxy Z Fold8 (12GB RAM, 512GB Storage)
+</span>
+
+<span class="price">
+₹1,99,999
+</span>
+
+</div>
+
+</body>
+</html>
