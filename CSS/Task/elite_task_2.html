@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Sale Hover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ececec;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .card {
+            width: 330px;
+            height: 450px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card img {
+            position: absolute;
+            top: 0;
+            left: -40px;
+            width: calc(100% + 80px);
+            height: 100%;
+            object-fit: cover;
+            transition: 0.8s ease;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .35);
+            transition: .5s;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .content h2 {
+            font-size: 25px;
+            letter-spacing: 10px;
+            font-weight: 200;
+            color: #fff;
+
+            opacity: 1;
+            transform: translate(80px, -110px);
+            transition: .4s ease;
+        }
+
+        .content h2 span {
+            color: #ff2d2d;
+            font-weight: bold;
+        }
+
+        .content p {
+            margin-top: 15px;
+            font-size: 15px;
+            letter-spacing: 6px;
+            color: #fff;
+            transform: translate(60px, -110px);
+            opacity: 0;
+            transition: .4s ease;
+        }
+
+        .border {
+            position: absolute;
+            inset: 35px;
+            border: 2px solid #fff;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: 0.35s ease;
+            pointer-events: none;
+        }
+
+        .card:hover img {
+            left: 0;
+
+
+        }
+
+        .card:hover .border {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+     
+
+        .card:hover .content p {
+            opacity: 1;
+            transform: translate(60px, -100px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="images/img2.jpg" alt="">
+
+        <div class="overlay"></div>
+
+        <div class="border">
+            <span class="top"></span>
+            <span class="right"></span>
+            <span class="bottom"></span>
+            <span class="left"></span>
+        </div>
+
+        <div class="content">
+            <h2><span>S</span>ALE</h2>
+            <p>UP TO 55%</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

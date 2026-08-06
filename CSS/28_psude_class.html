@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psude Classes</title>
+    <style>
+        ul li:first-child{
+            background-color: skyblue;
+        }
+        ul li:last-child{
+            background-color: yellow;
+        }
+        ul li:nth-child(3){
+            background-color: orange;
+        }
+        ul li:nth-child(even){
+            background-color: lightblue;
+        }
+        ul li:nth-child(odd){
+            background-color: lawngreen;
+        }
+        ul li:nth-last-child(1){
+            background-color: lightcoral;
+        }
+        .main{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            transition: .7s;
+        }
+        .main:hover {
+            background-color: lightblue;
+            transform: translate(100px);
+            border-radius: 60px;
+            
+        }
+        input{
+            margin-top: 50px;
+        }
+        input:focus{
+            background-color: skyblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- psude class :  -->
+
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+        <li>Feedback</li>
+        <li>Help</li>
+    </ul>
+
+    <!-- prent to prent -->
+     <!-- prent to child -->
+
+    <div class="main">
+
+    </div>
+
+
+    <input type="text" placeholder="Enter you name">
+
+</body>
+</html>

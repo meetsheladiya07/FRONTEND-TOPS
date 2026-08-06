@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Outline Button</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial,sans-serif;
+}
+
+.outline-btn{
+    position:relative;
+    width:240px;
+    height:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+    color:#fff;
+    text-shadow:0 0 5px black;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:3px;
+
+    background:linear-gradient(180deg,#53F7EA,#24D5C5);
+
+    transition:.35s;
+    overflow:visible;
+}
+
+/* Outside Border */
+.outline-btn::before{
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    border:3px solid #35F7EA;
+
+    transition:all .35s ease;
+}
+
+/* Inner Border */
+.outline-btn::after{
+    content:"";
+    position:absolute;
+
+    top:8px;
+    left:8px;
+    right:8px;
+    bottom:8px;
+
+
+    pointer-events:none;
+}
+
+/* Hover */
+.outline-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Outline Goes Outside */
+.outline-btn:hover::before{
+    top:-12px;
+    left:-12px;
+    right:-12px;
+    bottom:-12px;
+
+    
+}
+    </style>
+
+</head>
+<body>
+
+    <a href="#" class="outline-btn">
+        <span>SHOP NOW</span>
+    </a>
+
+</body>
+</html>
