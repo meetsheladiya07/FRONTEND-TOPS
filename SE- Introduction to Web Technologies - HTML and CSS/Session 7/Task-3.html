@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+
+    <style>
+        .product-grid {
+            display: grid;
+
+            /* 3 columns and 2 rows */
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 2px 5px gray;
+        }
+
+        .product-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Flipkart Products</h1>
+
+    <section class="product-grid">
+
+        <div class="product-card">
+            <img src="images/img5.png"
+                 alt="Smartphone">
+            <h3>Samsung Galaxy S26 Ultra</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="/images/img6.png"
+                 alt="Laptop">
+            <h3>Dell G15</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="images/img7.png"
+                 alt="Headphones">
+            <h3>Apple AirPods Max 2</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="images/img8.png"
+                 alt="Smart Watch">
+            <h3>Galaxy Watch8</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="images/img9.png"
+                 alt="Keyboard">
+            <h3>Wooting 80HE</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="images/img10.png"
+                 alt="Mouse">
+            <h3>Logitech G502</h3>
+        </div>
+
+    </section>
+
+</body>
+</html>

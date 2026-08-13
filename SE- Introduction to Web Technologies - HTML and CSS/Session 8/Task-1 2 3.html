@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Makes the website responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+
+    <title>Responsive Product Card</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+        }
+
+        /* Product Card */
+        .product-card {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px;
+
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+            font-size: 18px;
+        }
+
+        /* Product Image */
+        .product-image {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        /* Product Details */
+        .product-details {
+            flex: 1;
+        }
+
+        .product-name {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            display: inline-block;
+            padding: 6px 10px;
+            background-color: #388e3c;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .price {
+            font-size: 25px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .buy-button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+
+            background-color: #ff9f00;
+            color: white;
+
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #fb641b;
+        }
+
+
+        /* =========================
+           BREAKPOINT 1 : 1200px
+           Desktop
+           ========================= */
+
+        @media only screen and (max-width: 1200px) {
+
+            .product-card {
+                padding: 22px;
+                font-size: 17px;
+            }
+
+            .product-name {
+                font-size: 26px;
+            }
+
+            .price {
+                font-size: 23px;
+            }
+        }
+
+
+        /* =========================
+           BREAKPOINT 2 : 900px
+           Tablet
+           ========================= */
+
+        @media only screen and (max-width: 900px) {
+
+            .product-card {
+                padding: 18px;
+                gap: 20px;
+                font-size: 16px;
+            }
+
+            .product-image {
+                width: 250px;
+                height: 250px;
+            }
+
+            .product-name {
+                font-size: 23px;
+            }
+
+            .price {
+                font-size: 21px;
+            }
+        }
+
+
+        /* =========================
+           BREAKPOINT 3 : 600px
+           Mobile
+           ========================= */
+
+        @media only screen and (max-width: 600px) {
+
+            .product-card {
+
+                /* Change horizontal layout to vertical */
+                flex-direction: column;
+
+                padding: 15px;
+                gap: 10px;
+
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .product-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .product-name {
+                font-size: 20px;
+            }
+
+            .price {
+                font-size: 19px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .buy-button {
+                width: 100%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="product-card">
+
+        <!-- Product Image -->
+        <img
+            class="product-image"
+            src="images/img1.png"
+            alt="Smartphone">
+
+        <!-- Product Details -->
+        <div class="product-details">
+
+            <h1 class="product-name">
+                Samsung Galaxy S26 Ultra
+            </h1>
+
+            <span class="rating">
+                4.7 &#9734;
+            </span>
+
+            <p class="price">
+                ₹1,39,999
+            </p>
+
+            <p class="description">
+                Samsung Galaxy S26 Ultra with powerful performance,
+                high-quality camera, large display and premium design.
+            </p>
+
+            <button class="buy-button">
+                BUY NOW
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
