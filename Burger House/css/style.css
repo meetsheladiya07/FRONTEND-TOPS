@@ -50,6 +50,7 @@
     font-size: 21px;
     color: #3d2514;
 }
+
 .icons .bar {
     font-size: 21px;
     color: #3d2514;
@@ -63,17 +64,140 @@
     padding: 70px 0px;
     margin-top: 50px;
 }
+
 .header-content .header-p {
-    font-size: clamp(16px,3.5vw,24px);
+    font-size: clamp(16px, 3.5vw, 24px);
     font-family: "Bebas Neue";
 }
+
 .header-content .header-h1 {
-    font-size: clamp(20px,7.8vw,114px);
+    font-size: clamp(20px, 7.8vw, 114px);
     font-family: "Alfa Slab One";
     filter: drop-shadow(3.936px 4.528px 0px #fee8bc);
 }
+
 .header-content .header-h3 {
-     font-size: clamp(17px,4.8vw,56px);
+    font-size: clamp(17px, 4.8vw, 56px);
     font-family: "Alfa Slab One";
     filter: drop-shadow(3.936px 4.528px 0px #fee8bc);
+}
+
+.image-container {
+    width: 90%;
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.big-image {
+    grid-row: 1 / 3;
+    
+}
+
+.small-image {
+    width: 100%;
+}
+
+.lable {
+    width: 18%;
+    background-color: #ffc045;
+    color: #3d2514;
+    font-family: "Bebas Neue";
+    font-size: clamp(16px, 3.5vw, 19px);
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: flex;
+    font-weight: 400;
+    margin: 0 auto;
+
+}
+
+#burger {
+    padding: 20px 0px;
+}
+
+.burger-content {
+    color: #3d2514;
+    text-align: center;
+}
+
+.burger-content .burger-h1 {
+    font-size: clamp(17px, 4.8vw, 50px);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Alfa Slab One";
+}
+
+.burger-content .burger-p {
+    font-size: clamp(16px, 3.5vw, 19px);
+    font-weight: 100;
+    font-family: "Montserrat";
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card-content {
+    margin: 40px 0px;
+}
+
+.card-content .row {
+    display: flex;
+}
+
+.card-content .row .col {
+    /* border: 2px solid; */
+    width: 33.33%;
+}
+
+.card .card-img {
+    /* width: 400px; */
+    height: 300px;
+}
+
+.card-text {
+    text-align: center;
+    color: #3d2514;
+}
+
+.card-text .card-h4 {
+    font-size: clamp(18px, 4.6vw, 30px);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Bebas Neue";
+}
+
+.card-text .card-p {
+    font-size: clamp(16px, 3.5vw, 19px);
+    font-weight: 100;
+    width: 80%;
+    margin: 20px auto;
+    font-family: "Montserrat";
+}
+
+.card-text .card-btn {
+    font-size: clamp(16px, 3.5vw, 19px);
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Alfa Slab One";
+    background-color: #bf2222;
+}
+
+.event-container{
+    width: 90%;
+    margin: 50px auto;
+    box-shadow: black;
 }
