@@ -1,6 +1,10 @@
 @media only screen and (max-width:1160px) {}
 
-@media only screen and (max-width:992px) {}
+@media only screen and (max-width:992px) {
+    #foot {
+        background-size: cover;
+    }
+}
 
 @media only screen and (max-width:768px) {
     .list {
@@ -73,6 +77,30 @@
     .details input,
     .details-btn {
         width: 100%;
+    }
+
+    #foot .row {
+        display: block;
+    }
+
+    #foot .row .col-4 {
+        width: 100%;
+        text-align: center;
+    }
+
+    #foot .row .col-6 {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .data .row .col {
+        width: 100%;
+        /* border: 2px solid gold; */
+    }
+
+    .foot-p {
+        margin: 0 auto;
     }
 
 }
