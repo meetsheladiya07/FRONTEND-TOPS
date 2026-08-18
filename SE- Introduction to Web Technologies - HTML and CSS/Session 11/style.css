@@ -1,0 +1,11 @@
+/* Override Bootstrap's default primary button */
+
+.btn-primary {
+    background-color: #e91e63;
+    border-color: #e91e63;
+}
+
+.btn-primary:hover {
+    background-color: #c2185b;
+    border-color: #c2185b;
+}
