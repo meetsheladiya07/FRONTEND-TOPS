@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+#header {
+    /* height: 600px; */
+    background-size: 100% 100%;
+
+}
+
+.nav {
+    display: flex;
+
+    background-color: #4a1831;
+
+}
+
+.list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.list .nav-li {
+    display: inline-block;
+
+}
+
+.nav-li .nav-a {
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffd7ad;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-decoration: none;
+}
+
+.icons .se {
+    font-size: 25px;
+    color: #ffd7ad;
+}
+
+.icons .bar {
+    font-size: 25px;
+    color: #ffd7ad;
+    display: none;
+}
+
