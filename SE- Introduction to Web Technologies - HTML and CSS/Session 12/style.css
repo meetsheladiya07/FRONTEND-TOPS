@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.artist-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #ffc107;
+}
+
+.artist-bio {
+    max-width: 650px;
+}
+
+/* Social Buttons */
+.social-btn {
+    margin: 5px;
+}
+
+.social-btn i {
+    margin-right: 5px;
+}
+
+/* Playlist Cards */
+.playlist-card {
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.playlist-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.playlist-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Product Cards */
+.product-card {
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.product-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Icons */
+.footer-icons a {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #ffc107 !important;
+}
