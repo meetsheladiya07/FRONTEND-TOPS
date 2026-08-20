@@ -1,45 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariachi</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/media.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
-        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <title>Marachi</title>
+
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="media.css">
+
+
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-    <!-- header start -->
-    <header id="header">
-        <div class="container">
-            <nav class="nav">
-                <ul class="list">
-                    <li class="nav-li"><a href="" class="nav-a">Home</a></li>
-                    <li class="nav-li"><a href="" class="nav-a">About</a></li>
-                    <li class="nav-li"><a href="" class="nav-a">Menu</a></li>
-                    <li class="nav-li"><a href="" class="nav-a">Offers</a></li>
-                    <li class="nav-li"><a href="" class="nav-a">Contact</a></li>
-                </ul>
-                <div class="icons">
-                    <i class="fa-solid se fa-magnifying-glass"></i>
-                    <i class="fa-solid bar fa-bars"></i>
-                </div>
-            </nav>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo-mobile">
+            MARACHI
+        </div>
+
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#menu">MENU</a>
+            <a href="#offers">OFFERS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
             <div class="logo">
-                <img src="/img/HeaderImg.png" width="100%" alt="">
+                <div class="logo-icon">
+                <img src="img/logo.png" alt="Logo">
+                </div>
+            </div>
+
+            <h1>Marachi</h1>
+
+            <p class="hero-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vivamus odio vitae vestibulum.
+            </p>
+
+            <button class="btn-light">ORDER NOW</button>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="img/hero-food.png" alt="Food">
+        </div>
+
+    </section>
+
+
+    <!-- ================= DON'T MISS MENU ================= -->
+
+    <section class="menu-intro" id="menu">
+
+        <h2>Don’t Miss our Menu!</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Vivamus lacinia odio vitae vestibulum.
+        </p>
+
+        <button class="btn-dark">SEE MENU</button>
+
+    </section>
+
+
+    <!-- ================= FOOD BANNER ================= -->
+
+    <section class="food-strip">
+
+        <img src="img/img.png" alt="Food">
+
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-image">
+            <img src="img/about-food.png" alt="Food">
+
+        </div>
+
+        <div class="about-content">
+
+            <h2>About Marachi</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vivamus lacinia odio vitae.
+            </p>
+
+            <button class="btn-dark">TELL ME MORE</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DISCOUNT ================= -->
+
+    <section class="discount">
+
+        <div class="discount-content">
+
+            <h2>
+                <span>25%</span><br>
+                DISCOUNT<br>
+                <strong>ON TACOS!</strong>
+            </h2>
+
+        </div>
+
+        <div class="taco-image">
+            <img src="img/taco-hand.png" alt="Taco">
+        </div>
+
+    </section>
+
+
+    <!-- ================= OFFERS ================= -->
+
+    <section class="offers" id="offers">
+
+        <div class="offers-content">
+
+            <h2>See our Offers</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vivamus lacinia odio vitae vestibulum.
+            </p>
+
+            <button class="btn-light">SEE OFFERS</button>
+
+        </div>
+
+        <div class="offers-image">
+
+            <img src="img/nachos.png" alt="Nachos">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONIAL ================= -->
+
+    <section class="testimonial">
+
+        <div class="testimonial-overlay">
+
+            <div class="testimonial-logo">
+
+                <img src="img/logo.png" alt="">
+                <h2>MARACHI</h2>
+
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
+                sed do eiusmod tempor incididunt ut labore et dolore<br>
+                magna aliqua.
+            </p>
+
+            <h3>Pedro Rodriguez</h3>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SUBSCRIBE ================= -->
+
+    <section class="subscribe">
+
+        <h2>Get our Latest Offers!</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Vivamus lacinia odio vitae vestibulum.
+        </p>
+
+        <form>
+
+            <input type="email" placeholder="Your Email">
+
+            <button type="submit">
+                SUBSCRIBE
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+
+            <div class="footer-col footer-main">
+
+                <h3>Marachi</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam sed dignissim nunc, dignissim.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Column 2 -->
+
+            <div class="footer-col">
+
+                <h3>About</h3>
+
+                <a href="#">History</a>
+                <a href="#">Our Team</a>
+                <a href="#">Brand Guidelines</a>
+                <a href="#">Terms & Condition</a>
+                <a href="#">Privacy Policy</a>
+
+            </div>
+
+
+            <!-- Column 3 -->
+
+            <div class="footer-col">
+
+                <h3>Services</h3>
+
+                <a href="#">How to Order</a>
+                <a href="#">Our Recipe</a>
+                <a href="#">Offers</a>
+                <a href="#">Promo</a>
+                <a href="#">Payment Method</a>
+
+            </div>
+
+
+            <!-- Column 4 -->
+
+            <div class="footer-col">
+
+                <h3>Other</h3>
+
+                <a href="#">Contact Us</a>
+                <a href="#">Help</a>
+
             </div>
 
         </div>
 
-    </header>
+    </footer>
 
-    <!-- header end -->
 
 </body>
-
 </html>
