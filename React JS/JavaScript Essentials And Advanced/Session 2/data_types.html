@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Primitive vs Reference Types</title>
+</head>
+<body>
+
+    <h2>Primitive vs Reference Types</h2>
+
+    <script>
+        // Primitive type: String
+        let user1 = "Meet";
+        let user2 = user1;
+
+        user1 = "Ridham";
+
+        console.log("user1:", user1);
+        console.log("user2:", user2);
+
+        // Reference type: Array
+        let favApps1 = ["Instagram", "Spotify"];
+        let favApps2 = favApps1;
+
+        favApps1.push("Zomato");
+
+        console.log("favApps1:", favApps1);
+        console.log("favApps2:", favApps2);
+
+        /*
+        Difference:
+        Primitive types store the actual value.
+        So changing user1 does not change user2.
+
+        Arrays are reference types.
+        favApps1 and favApps2 refer to the same array,
+        so adding "Zomato" to favApps1 also appears in favApps2.
+        */
+
+         /*// Primitive type
+         
+        let favFood = 'pizza';
+        let favFoodCopy = favFood;
+
+        favFood = 'burger';
+
+        console.log(favFood);      // burger
+        console.log(favFoodCopy);  // pizza
+
+
+        // Reference type
+        let zomatoUser = { city: 'Mumbai' };
+        let zomatoUserCopy = zomatoUser;
+
+        zomatoUser.city = 'Delhi';
+
+        console.log(zomatoUser);      // { city: 'Delhi' }
+        console.log(zomatoUserCopy);  // { city: 'Delhi' }
+
+        /*
+        Primitive:
+        favFoodCopy gets a separate copy of the value.
+        Changing favFood does not affect favFoodCopy.
+
+        Reference:
+        zomatoUserCopy refers to the same object.
+        Changing the city affects both variables.*/
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Typing</title>
+</head>
+<body>
+
+    <h2>Profile</h2>
+
+    <script>
+        function showProfile(name, followers, isPremium) {
+
+            // Assign a string to followers
+            followers = "Many";
+            console.log(typeof followers); // string
+
+            // Assign a number to followers
+            followers = 1000;
+            console.log(typeof followers); // number
+
+            // Print profile details
+            console.log("Name:", name);
+            console.log("Followers:", followers);
+            console.log("Premium:", isPremium);
+        }
+
+        showProfile("Meet", 500, true);
+    </script>
+
+</body>
+</html>

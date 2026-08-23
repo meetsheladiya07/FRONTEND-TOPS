@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Can Order Food</title>
+</head>
+<body>
+
+    <h2>Food Order Check</h2>
+
+    <script>
+        function canOrderFood(isLoggedIn, hasPaymentMethod) {
+            return isLoggedIn && hasPaymentMethod;
+        }
+
+        // All possible combinations
+        console.log("true, true:", canOrderFood(true, true));
+        console.log("true, false:", canOrderFood(true, false));
+        console.log("false, true:", canOrderFood(false, true));
+        console.log("false, false:", canOrderFood(false, false));
+    </script>
+
+</body>
+</html>

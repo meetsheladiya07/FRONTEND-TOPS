@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio Message</title>
+    <title>Insta Bio</title>
 </head>
+
 <body>
+    <button id="greetingBtn">Show Greeting</button>
+
     <script>
-        alert("Welcome to your Insta Bio-Link Page!")
+        //alert("Welcome to your Insta Bio-Link Page!")
+        const button = document.querySelector("#greetingBtn");
+
+        button.addEventListener("click", function () {
+            //alert("Hello from JS!");
+            alert("Hello Meet!");
+        });
+
     </script>
 </body>
+
 </html>

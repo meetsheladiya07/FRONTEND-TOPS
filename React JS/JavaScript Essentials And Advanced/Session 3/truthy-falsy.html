@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Truthy and Falsy</title>
+</head>
+<body>
+
+    <h2>Truthy and Falsy</h2>
+
+    <script>
+        function isTruthy(input) {
+            return input ? "Truthy" : "Falsy";
+        }
+
+        console.log("", isTruthy(""));
+        console.log("0:", isTruthy(0));
+        console.log("null:", isTruthy(null));
+        console.log("hello:", isTruthy("hello"));
+        console.log("42:", isTruthy(42));
+    </script>
+
+</body>
+</html>
