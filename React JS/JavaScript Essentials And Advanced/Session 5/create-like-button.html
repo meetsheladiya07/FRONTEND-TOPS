@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Like Button</title>
+</head>
+<body>
+
+    <script>
+        // Function Declaration
+        function createLikeButton(label, color) {
+            const button = document.createElement("button");
+
+            button.textContent = label;
+            button.style.backgroundColor = color;
+            button.style.color = "white";
+            button.style.border = "none";
+            button.style.padding = "12px 25px";
+            button.style.borderRadius = "5px";
+            button.style.cursor = "pointer";
+            button.style.fontSize = "16px";
+
+            return button;
+        }
+
+        // Create the button
+        const likeButton = createLikeButton("Like", "#1877F2");
+
+        // Append button to document body
+        document.body.appendChild(likeButton);
+    </script>
+
+</body>
+</html>

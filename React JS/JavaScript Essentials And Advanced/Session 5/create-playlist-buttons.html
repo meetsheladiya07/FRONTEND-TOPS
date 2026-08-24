@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Playlist Buttons</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        .playlist-button {
+            display: block;
+            width: 250px;
+            margin: 10px 0;
+            padding: 12px 20px;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Favorite Spotify Tracks</h2>
+
+    <script>
+        // Reusable function
+        function createPlaylistButton(songName, themeColor) {
+            const button = document.createElement("button");
+
+            button.textContent = songName;
+            button.style.backgroundColor = themeColor;
+            button.className = "playlist-button";
+
+            return button;
+        }
+
+        // Create three track buttons
+        const song1 = createPlaylistButton("Love Me Like You Do", "#1DB954");
+        const song2 = createPlaylistButton("Illegal Hathiyar", "#8E44AD");
+        const song3 = createPlaylistButton("Aam Jahe Munde", "#E74C3C");
+
+        // Display buttons
+        document.body.appendChild(song1);
+        document.body.appendChild(song2);
+        document.body.appendChild(song3);
+    </script>
+
+</body>
+</html>

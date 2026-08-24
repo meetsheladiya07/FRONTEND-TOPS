@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discounted Price</title>
+</head>
+<body>
+
+    <h2 id="output"></h2>
+
+    <script>
+        // Function Expression
+        const getDiscountedPrice = function(price, discountPercent) {
+            const discount = (price * discountPercent) / 100;
+            return price - discount;
+        };
+
+        // Example: Flipkart-style sale
+        const finalPrice = getDiscountedPrice(1000, 20);
+
+        // Display result
+        document.getElementById("output").textContent =
+            "Final Price: ₹" + finalPrice;
+    </script>
+
+</body>
+</html>

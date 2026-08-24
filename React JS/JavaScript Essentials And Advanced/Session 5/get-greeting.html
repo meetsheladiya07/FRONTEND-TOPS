@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Expression</title>
+</head>
+<body>
+
+    <h2 id="output"></h2>
+
+    <script>
+        // Function Expression
+        const getGreeting = function(name) {
+            return "Hello, " + name + "!";
+        };
+
+        // Call the function
+        const message = getGreeting("Meet");
+
+        // Display the message
+        document.getElementById("output").textContent = message;
+    </script>
+
+</body>
+</html>

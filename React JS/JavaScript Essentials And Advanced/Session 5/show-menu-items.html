@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Menu Items</title>
+
+    <style>
+        .menu-item {
+            width: 300px;
+            margin: 15px auto;
+            padding: 15px 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-item h3 {
+            margin: 0 0 8px;
+        }
+
+        .menu-item p {
+            margin: 0;
+            color: #e23744;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function showMenuItem(name, price) {
+            const menuItem = document.createElement("div");
+
+            menuItem.className = "menu-item";
+
+            menuItem.innerHTML = `
+                <h3>${name}</h3>
+                <p>₹${price}</p>
+            `;
+
+            return menuItem;
+        }
+
+        const item1 = showMenuItem("Pizza", 299);
+        const item2 = showMenuItem("Burger", 149);
+        const item3 = showMenuItem("Pasta", 199);
+
+        document.body.appendChild(item1);
+        document.body.appendChild(item2);
+        document.body.appendChild(item3);
+    </script>
+
+</body>
+</html>

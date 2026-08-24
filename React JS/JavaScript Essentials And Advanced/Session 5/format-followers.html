@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format Followers</title>
+</head>
+<body>
+
+    <h2 id="output"></h2>
+
+    <script>
+        // Arrow Function
+        const formatFollowers = (number) => {
+            if (number >= 1000000) {
+                return (number / 1000000) + "M";
+            } 
+            else if (number >= 1000) {
+                return (number / 1000) + "K";
+            } 
+            else {
+                return number.toString();
+            }
+        };
+
+        // Example
+        const followers = formatFollowers(1500);
+
+        // Display output
+        document.getElementById("output").textContent = followers;
+    </script>
+
+</body>
+</html>
