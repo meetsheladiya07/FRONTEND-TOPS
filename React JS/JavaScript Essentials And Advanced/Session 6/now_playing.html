@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now Playing</title>
+</head>
+<body>
+
+    <h2>🎵 Now Playing</h2>
+
+    <p>Song: <span id="song-title">Tum Hi Ho</span></p>
+
+    <button id="changeBtn" onclick="changeSong()">Change Song</button>
+
+    <script>
+        // Predefined array of songs
+        let songs = [
+            "Tum Hi Ho",
+            "Kesariya",
+            "Apna Bana Le",
+            "Chaleya",
+            "Heeriye"
+        ];
+
+        let index = 0;
+
+        function changeSong() {
+            // Move to the next song
+            index++;
+
+            // Start again when the array ends
+            if (index >= songs.length) {
+                index = 0;
+            }
+
+            // Update the song title
+            document.getElementById("song-title").innerHTML = songs[index];
+        }
+    </script>
+
+</body>
+</html>

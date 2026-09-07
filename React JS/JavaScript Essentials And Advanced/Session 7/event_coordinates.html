@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Coordinates</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            background-color: #f1f3f6;
+        }
+
+        .product-card {
+            background-color: white;
+            width: 280px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card h3 {
+            color: #2874f0;
+        }
+
+        #addBtn {
+            background-color: #ff9f00;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #addBtn:hover {
+            background-color: #fb641b;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Flipkart Style Product</h2>
+
+    <div class="product-card">
+        <h3>Wireless Headphones</h3>
+        <p>Price: ₹999</p>
+
+        <button id="addBtn">Add to Cart</button>
+    </div>
+
+    <script>
+        // Select the Add to Cart button
+        let addBtn = document.getElementById("addBtn");
+
+        // Function to log mouse event details
+        function logMouseEvent(event) {
+            console.log("Event Type: " + event.type);
+            console.log("X Coordinate: " + event.clientX);
+            console.log("Y Coordinate: " + event.clientY);
+        }
+
+        // Add event listeners for different mouse events
+        addBtn.addEventListener("click", logMouseEvent);
+        addBtn.addEventListener("mouseover", logMouseEvent);
+        addBtn.addEventListener("mouseout", logMouseEvent);
+    </script>
+
+</body>
+</html>

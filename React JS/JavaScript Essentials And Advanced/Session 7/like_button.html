@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Button</title>
+</head>
+<body>
+
+    <h2>Instagram Style</h2>
+
+    <button id="likeBtn">Like</button>
+
+    <p>Likes: <span id="likeCount">0</span></p>
+
+    <script>
+        // Variable to track the like count
+        let count = 0;
+
+        // Select the button and like count
+        let likeBtn = document.getElementById("likeBtn");
+        let likeCount = document.getElementById("likeCount");
+
+        // Add click event listener
+        likeBtn.addEventListener("click", function() {
+            // Increment the count
+            count++;
+
+            // Update the displayed like count
+            likeCount.innerHTML = count;
+        });
+    </script>
+
+</body>
+</html>

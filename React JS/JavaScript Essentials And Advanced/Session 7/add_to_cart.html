@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+</head>
+<body>
+
+    <h2>Product</h2>
+
+    <p>Product Name: <strong>Wireless Headphones</strong></p>
+
+    <button id="addBtn">Add to Cart</button>
+
+    <h3>My Cart</h3>
+    <ul id="cart"></ul>
+
+    <script>
+        // Function to add product to cart
+        function addToCart() {
+            // Get the product name
+            let productName = "Wireless Headphones";
+
+            // Create a new li element
+            let li = document.createElement("li");
+
+            // Set the product name
+            li.innerHTML = productName;
+
+            // Add the product to the cart
+            document.querySelector("#cart").appendChild(li);
+        }
+
+        // Attach click event using addEventListener
+        document.querySelector("#addBtn").addEventListener("click", addToCart);
+    </script>
+
+</body>
+</html>

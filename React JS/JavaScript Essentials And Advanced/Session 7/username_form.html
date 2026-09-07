@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username Form</title>
+</head>
+<body>
+
+    <h2>Username Form</h2>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" onchange="logUsername()">
+
+    <script>
+        function logUsername() {
+            // Get the entered username
+            let username = document.getElementById("username").value;
+
+            // Log the username to the console
+            console.log(username);
+        }
+    </script>
+
+</body>
+</html>

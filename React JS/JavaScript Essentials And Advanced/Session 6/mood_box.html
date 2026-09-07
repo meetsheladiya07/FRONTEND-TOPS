@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Box</title>
+</head>
+<body>
+
+    <h2>Change Mood Color</h2>
+
+    <input type="text" id="colorInput" placeholder="Enter color name">
+
+    <div id="moodbox"
+         style="width: 300px; height: 150px; border: 1px solid black; margin-top: 20px;">
+    </div>
+
+    <script>
+        function updateMood() {
+            // Get the input value
+            let color = document.getElementById("colorInput").value;
+
+            // Change the background color
+            document.getElementById("moodbox").style.backgroundColor = color;
+        }
+
+        // Listen for input changes in real-time
+        document.getElementById("colorInput").addEventListener("input", updateMood);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Coordinates</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #box {
+            width: 400px;
+            height: 250px;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #coordinates {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Mouse Coordinates</h2>
+
+    <div id="box">
+        Click anywhere inside this box
+    </div>
+
+    <p id="coordinates">X: 0, Y: 0</p>
+
+    <script>
+        // Select the div
+        let box = document.getElementById("box");
+
+        // Add click event listener
+        box.addEventListener("click", function(event) {
+
+            // Get mouse coordinates using the event object
+            let x = event.clientX;
+            let y = event.clientY;
+
+            // Display the coordinates
+            document.getElementById("coordinates").innerHTML =
+                "X: " + x + ", Y: " + y;
+        });
+    </script>
+
+</body>
+</html>

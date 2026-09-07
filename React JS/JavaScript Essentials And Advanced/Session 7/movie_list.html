@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f2f2f2;
+        }
+
+        .movie-card {
+            background-color: white;
+            width: 300px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .movie-card button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Movie List</h2>
+
+    <div id="movie-list">
+
+        <div class="movie-card">
+            <span>3 Idiots</span>
+            <button>Remove</button>
+        </div>
+
+        <div class="movie-card">
+            <span>Taare Zameen Par</span>
+            <button>Remove</button>
+        </div>
+
+        <div class="movie-card">
+            <span>Chhichhore</span>
+            <button>Remove</button>
+        </div>
+
+    </div>
+
+    <script>
+        // Select all Remove buttons
+        let removeButtons = document.querySelectorAll(".movie-card button");
+
+        // Add click event to each button
+        removeButtons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                // Remove the movie card from the DOM
+                button.parentElement.remove();
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
+

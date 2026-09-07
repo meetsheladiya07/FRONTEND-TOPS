@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Playlist</title>
+</head>
+<body>
+
+    <h2>My Playlist</h2>
+
+    <input type="text" id="songInput" placeholder="Enter song name">
+    <button onclick="addSong()">Add Song</button>
+
+    <ul id="playlist"></ul>
+
+    <script>
+        function addSong() {
+            // Get the input value using querySelector
+            let songName = document.querySelector("#songInput").value;
+
+            // Create a new li element
+            let li = document.createElement("li");
+
+            // Set the song name
+            li.innerHTML = songName;
+
+            // Add the li to the playlist
+            document.querySelector("#playlist").appendChild(li);
+
+            // Clear the input box
+            document.querySelector("#songInput").value = "";
+        }
+    </script>
+
+</body>
+</html>

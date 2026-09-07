@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Song Card</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        button {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #song-container {
+            margin-top: 20px;
+        }
+
+        .song-card {
+            background-color: white;
+            width: 250px;
+            margin: 15px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .song-card h3 {
+            margin: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Favorite Playlist</h2>
+
+    <button onclick="addSong()">Add Song</button>
+
+    <div id="song-container"></div>
+
+    <script>
+        // Predefined playlist
+        let songs = [
+            "Tum Hi Ho",
+            "Kesariya",
+            "Apna Bana Le",
+            "Chaleya",
+            "Heeriye"
+        ];
+
+        function addSong() {
+            // Generate a random song index
+            let randomIndex = Math.floor(Math.random() * songs.length);
+
+            // Get the random song title
+            let songName = songs[randomIndex];
+
+            // Create a new card
+            let card = document.createElement("div");
+            card.className = "song-card";
+
+            // Add the song title to the card
+            card.innerHTML = "<h3>" + songName + "</h3>";
+
+            // Add the card below the button
+            document.getElementById("song-container").appendChild(card);
+        }
+    </script>
+
+</body>
+</html>
