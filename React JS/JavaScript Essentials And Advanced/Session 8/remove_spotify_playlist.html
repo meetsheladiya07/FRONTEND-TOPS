@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Remove Spotify Playlist</title>
+</head>
+
+<body>
+
+    <h1>Spotify Playlists</h1>
+
+    <script>
+        const playlists = [
+            {
+                name: "Daily Mix",
+                creator: "Spotify",
+                numberOfSongs: 50
+            },
+            {
+                name: "Chill Vibes",
+                creator: "Meet",
+                numberOfSongs: 35
+            },
+            {
+                name: "Workout Hits",
+                creator: "John",
+                numberOfSongs: 40
+            }
+        ];
+
+        const removedPlaylist = playlists.pop();
+
+        console.log("Removed Playlist:");
+        console.log(removedPlaylist);
+
+        console.log("Updated Playlists:");
+        console.log(playlists);
+    </script>
+
+</body>
+</html>

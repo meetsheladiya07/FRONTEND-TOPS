@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie IMDb Ratings</title>
+</head>
+
+<body>
+
+    <h1>Movie IMDb Ratings</h1>
+
+    <script>
+         const movies = [
+            {
+                title: "Inception",
+                year: 2010,
+                rating: {
+                    imdb: 8.8,
+                    rottenTomatoes: 87
+                }
+            },
+            {
+                title: "The Dark Knight",
+                year: 2008,
+                rating: {
+                    imdb: 9.0,
+                    rottenTomatoes: 94
+                }
+            },
+            {
+                title: "Interstellar",
+                year: 2014,
+                rating: {
+                    imdb: 8.7,
+                    rottenTomatoes: 73
+                }
+            }
+        ];
+
+         for (let i = 0; i < movies.length; i++) {
+
+             console.log(
+                movies[i].title + " - IMDb Rating: " + movies[i].rating.imdb
+            );
+        }
+    </script>
+
+</body>
+</html>

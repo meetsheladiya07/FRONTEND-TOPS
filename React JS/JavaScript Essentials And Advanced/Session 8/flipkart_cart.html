@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipkart Shopping Cart</title>
+</head>
+
+<body>
+
+    <h1>Flipkart Shopping Cart</h1>
+
+    <script>
+        const cart = [
+            {
+                productName: "Wireless Mouse",
+                price: 599,
+                quantity: 2
+            },
+            {
+                productName: "Keyboard",
+                price: 999,
+                quantity: 1
+            },
+            {
+                productName: "Headphones",
+                price: 1499,
+                quantity: 2
+            },
+            {
+                productName: "USB Cable",
+                price: 299,
+                quantity: 3
+            }
+        ];
+
+        for (let i = 0; i < cart.length; i++) {
+
+            const totalPrice = cart[i].price * cart[i].quantity;
+
+            console.log(
+                cart[i].productName + " - Total Price: ₹" + totalPrice
+            );
+        }
+    </script>
+
+</body>
+</html>

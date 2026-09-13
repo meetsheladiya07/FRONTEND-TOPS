@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orders Total Price</title>
+</head>
+
+<body>
+
+    <h1>Order Details</h1>
+
+    <script>
+        const orders = [
+            {
+                orderId: 101,
+                items: [
+                    {
+                        itemName: "Laptop",
+                        price: 50000
+                    },
+                    {
+                        itemName: "Mouse",
+                        price: 800
+                    }
+                ],
+                delivery: {
+                    address: "Ahmedabad",
+                    status: "Delivered"
+                }
+            },
+            {
+                orderId: 102,
+                items: [
+                    {
+                        itemName: "Keyboard",
+                        price: 1500
+                    },
+                    {
+                        itemName: "Headphones",
+                        price: 2500
+                    }
+                ],
+                delivery: {
+                    address: "Rajkot",
+                    status: "Pending"
+                }
+            },
+            {
+                orderId: 103,
+                items: [
+                    {
+                        itemName: "Monitor",
+                        price: 12000
+                    },
+                    {
+                        itemName: "USB Cable",
+                        price: 500
+                    }
+                ],
+                delivery: {
+                    address: "Surat",
+                    status: "Shipped"
+                }
+            }
+        ];
+
+        for (let i = 0; i < orders.length; i++) {
+
+            let totalPrice = 0;
+
+            for (let j = 0; j < orders[i].items.length; j++) {
+                totalPrice = totalPrice + orders[i].items[j].price;
+            }
+
+            console.log(
+                "Order ID: " + orders[i].orderId +
+                " - Total Price: ₹" + totalPrice
+            );
+        }
+    </script>
+
+</body>
+</html>
