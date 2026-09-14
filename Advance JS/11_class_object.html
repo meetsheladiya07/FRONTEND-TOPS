@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Bank {
+
+            // data member
+            BankName = "HDFC";
+            BankIFSC = "HDFC00012H";
+            BankPin;
+            BankBalance=5000;
+
+            // member function
+            x = function details(pin) {
+
+                this.BankPin = pin;
+
+                console.log("Bank Name :", this.BankName);
+                console.log("Bank IFSC :", this.BankIFSC);
+                console.log("Bank Balance :", this.BankBalance);
+
+            }
+
+
+            // Deposit Function
+            y = function deposit(amount) {
+
+                this.BankBalance = this.BankBalance + amount;
+
+                console.log("Deposit Amount :", amount);
+                console.log("Updated Balance :", this.BankBalance);
+
+            }
+
+
+            // Withdraw Function
+            z = function withdraw(amount) {
+
+                if (amount > this.BankBalance) {
+
+                    alert("Insufficient Balance!");
+
+                    console.log("Withdraw Failed");
+                    console.log("Your Balance :", this.BankBalance);
+
+                } 
+                else {
+
+                    this.BankBalance = this.BankBalance - amount;
+
+                    console.log("Withdraw Amount :", amount);
+                    console.log("Updated Balance :", this.BankBalance);
+
+                }
+
+            }
+
+        }
+
+
+        // Object create
+        const user = new Bank();
+
+        // Account details
+        user.x(1234);
+
+
+        // Deposit 20000
+        user.y(20000);
+
+
+        // Withdraw 3000
+        user.z(3000);
+
+
+       
+        //user.z(25000);
+      
+
+
+
+        console.log(user);
+
+    </script>
+
+</body>
+
+</html>
