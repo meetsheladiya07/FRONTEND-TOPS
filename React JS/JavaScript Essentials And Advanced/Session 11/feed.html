@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed Loader</title>
+</head>
+<body>
+
+    <h2 id="message">Please wait...</h2>
+
+    <script>
+        // After 2 seconds
+        setTimeout(function() {
+            document.getElementById("message").innerText = "Loading your feed...";
+
+            // After another 2 seconds
+            setTimeout(function() {
+                document.getElementById("message").innerText = "Feed loaded!";
+            }, 2000);
+
+        }, 2000);
+    </script>
+
+</body>
+</html>
