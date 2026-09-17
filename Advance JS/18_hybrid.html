@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Inheritance</title>
+</head>
+<body>
+
+    <script>
+        
+        class A {
+            x = function demo(){
+                console.log("A class")
+            }
+        }
+        class B extends A {
+            y = function test(){
+                console.log("B class")
+            }
+        }
+
+        class C extends A {
+            z = function demo2(){
+                console.log("C class")
+            }
+        }
+
+        class D extends B {
+            w = function test2(){
+                console.log("D class")
+            }
+        }
+        class E extends D {
+            v = function demo3(){
+                console.log("E class")
+            }
+        }
+
+        const data = new C 
+        data.x()
+        data.z()
+        
+        const demo = new E
+        demo.w()
+        demo.x()
+
+    </script>
+    
+</body>
+</html>
