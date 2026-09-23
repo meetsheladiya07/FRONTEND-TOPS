@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Promise</title>
+</head>
+
+<body>
+
+    <h2>Payment Status</h2>
+
+    <script>
+
+        function pay() {
+
+            return new Promise((res, rej) => {
+
+                setTimeout(() => {
+
+                    res("Payment successful!");
+
+                }, 1000);
+
+            })
+                .then((message) => {
+
+                    console.log(message);
+
+                })
+        }
+
+        pay()
+
+
+    </script>
+
+</body>
+
+</html>

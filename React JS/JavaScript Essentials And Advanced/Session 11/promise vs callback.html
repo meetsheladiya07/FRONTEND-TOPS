@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipkart Product Search</title>
+</head>
+
+<body>
+
+    <h2>Flipkart Style Product Search</h2>
+
+    <p>Open the browser console to see the results.</p>
+
+    <script>
+
+
+        const products = [
+            { name: "iPhone 15", price: 69999 },
+            { name: "Samsung Galaxy S24", price: 74999 },
+            { name: "OnePlus 12", price: 59999 },
+            { name: "iPhone 14", price: 59999 },
+            { name: "Redmi Note 13", price: 18999 }
+        ]
+
+
+        // ==================================================
+        // CALLBACK VERSION
+        // ==================================================
+
+        function callback(search, callback) {
+
+            setTimeout(() => {
+
+                const result = products.filter(product =>
+                    product.name.toLowerCase().includes(search.toLowerCase())
+                )
+
+                callback(result)
+
+            }, 1000)
+        }
+
+
+        callback("iphone", (result) => {
+
+            console.log("Callback Version:")
+            console.log(result)
+
+        })
+
+
+        // ==================================================
+        // PROMISE VERSION
+        // ==================================================
+
+        function promise(search) {
+
+            return new Promise((resolve) => {
+
+                setTimeout(() => {
+
+                    const result = products.filter(product =>
+                        product.name.toLowerCase().includes(search.toLowerCase())
+                    )
+
+                    resolve(result)
+
+                }, 1000)
+
+            })
+                .then((result) => {
+
+                    console.log("Promise Version:")
+                    console.log(result)
+
+                })
+        }
+
+
+        promise("samsung")
+
+
+
+    </script>
+
+</body>
+
+</html>
