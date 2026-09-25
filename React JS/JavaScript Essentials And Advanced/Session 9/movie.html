@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movies LocalStorage</title>
+</head>
+
+<body>
+
+    <h2>Favorite Movies</h2>
+
+    <script>
+
+        let movies = ['Jawan', 'Pathaan', 'Dunki'];
+
+        localStorage.setItem('movies', JSON.stringify(movies));
+
+        let saved = localStorage.getItem('movies');
+
+        let arr = JSON.parse(saved);
+
+        console.log(arr);
+
+    </script>
+
+</body>
+</html>

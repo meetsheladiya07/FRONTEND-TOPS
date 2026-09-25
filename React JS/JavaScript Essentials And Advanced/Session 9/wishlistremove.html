@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipkart Wishlist</title>
+</head>
+
+<body>
+
+    <h2>My Wishlist</h2>
+
+    <button onclick="clearWishlist()">Clear Wishlist</button>
+
+    <div id="wishlist"></div>
+
+
+    <script>
+
+        const products = [
+            {
+                name: "iPhone 18",
+                price: 89999
+            },
+            {
+                name: "Samsung Galaxy S26",
+                price: 84999
+            },
+            {
+                name: "OnePlus 15 Pro",
+                price: 93999
+            }
+        ];
+
+        localStorage.setItem("wishlist", JSON.stringify(products));
+
+        function displayWishlist() {
+
+            const div = document.getElementById("wishlist");
+
+            div.innerHTML = "";
+
+            const saved = localStorage.getItem("wishlist");
+
+            if (saved === null) {
+                div.textContent = "Your wishlist is empty.";
+                return;
+            }
+
+            const wishlist = JSON.parse(saved);
+
+            wishlist.forEach((product) => {
+
+                const item = document.createElement("p");
+
+                item.textContent =
+                    product.name + " - ₹" + product.price;
+
+                div.appendChild(item);
+
+            });
+        }
+
+        function clearWishlist() {
+
+            localStorage.removeItem("wishlist");
+
+            displayWishlist();
+        }
+
+        displayWishlist();
+
+    </script>
+
+</body>
+</html>

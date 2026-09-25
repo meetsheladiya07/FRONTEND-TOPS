@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recent Searches</title>
+</head>
+
+<body>
+
+    <h2>Recent Searches</h2>
+
+
+    <script>
+
+        function getRecentSearches() {
+
+            const savedSearches = localStorage.getItem("recentSearches");
+
+            if (savedSearches === null) {
+                return [];
+            }
+
+            return JSON.parse(savedSearches);
+        }
+
+        const searches = getRecentSearches();
+
+        console.log(searches);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favorite Restaurants</title>
+</head>
+
+<body>
+
+    <h2>My Top 3 Favorite Zomato Restaurants</h2>
+
+    <input
+        type="text"
+        id="input"
+        placeholder="Enter restaurant name"
+    >
+
+    <button onclick="addRestaurant()">Add Restaurant</button>
+
+    <button onclick="clearFavorites()">Clear Favorites</button>
+
+    <h3>Favorite Restaurants:</h3>
+
+    <ul id="resList"></ul>
+
+    <script>
+
+        let restaurants = JSON.parse(
+            localStorage.getItem("favRest")
+        ) || [];
+
+
+        function displayRestaurants() {
+
+            const list = document.getElementById("resList");
+
+            list.innerHTML = "";
+
+            restaurants.forEach((restaurant) => {
+
+                const li = document.createElement("li");
+
+                li.textContent = restaurant;
+
+                list.appendChild(li);
+
+            });
+        }
+
+        function addRestaurant() {
+
+            const input = document.getElementById("input");
+
+            const resName= input.value.trim();
+
+            if (resName=== "") {
+                alert("Please enter a restaurant name.");
+                return;
+            }
+
+            if (restaurants.length >= 3) {
+                alert("You can add only 3 favorite restaurants.");
+                return;
+            }
+
+            restaurants.push(resName);
+
+            localStorage.setItem(
+                "favRest",
+                JSON.stringify(restaurants)
+            );
+
+            input.value = "";
+
+            displayRestaurants();
+        }
+
+        function clearFavorites() {
+
+            localStorage.removeItem("favRest");
+
+            restaurants = [];
+
+            displayRestaurants();
+        }
+
+        displayRestaurants();
+
+    </script>
+
+</body>
+</html>
