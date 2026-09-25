@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Product Details</title>
+</head>
+<body>
+    <script>
+        class FlipkartProduct {
+            constructor(name, price, rating) {
+                this.name = name;
+                this.price = price;
+                this.rating = rating;
+            }
+
+            getProductDetails() {
+                return `${this.name} - ₹${this.price} - ${this.rating}⭐`;
+            }
+        } 
+
+        const product = new FlipkartProduct("Redmi Note 12 Pro", 18999, 4.5);
+        console.log(product.getProductDetails());
+
+        
+    </script>
+</body>
+</html>

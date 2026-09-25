@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+</head>
+<body>
+    <script>
+        class Playlist{
+            constructor(name, songs){
+                this.name = name;
+                this.songs = songs;
+
+                console.log(`Playlist ${this.name} created with ${this.songs.length} songs.`);
+            }
+        }
+
+        const myPlaylist = new Playlist("Chill vibes", ["Khat", "Kesariya", "Love me like you do"]);
+    </script>
+</body>
+</html>

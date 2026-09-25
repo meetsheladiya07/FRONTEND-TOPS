@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Product Discount</title>
+</head>
+<body>
+    <script>
+        class FlipkartProduct {
+            constructor(name, price, rating) {
+                this.name = name;
+                this.price = price;
+                this.rating = rating;
+            }
+
+            getDiscountPrice(discountPercent) {
+                const discountAmount = (this.price * discountPercent) / 100;
+                const finalPrice = this.price - discountAmount;
+                return finalPrice;
+            }
+        }
+
+        const product = new FlipkartProduct("Samsung Galaxy S26 ultra", 139999, 4.5);
+        console.log(`Product: ${product.name}`);
+        console.log(`Price: ₹${product.price}`);
+        console.log(`Rating: ${product.rating} stars`);
+        console.log(`Discounted Price (10% off): ₹${product.getDiscountPrice(10)}`);
+    </script>
+</body>
+</html>

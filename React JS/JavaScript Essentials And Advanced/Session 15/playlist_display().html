@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+</head>
+
+<body>
+    <script>
+        class Playlist {
+
+            // displayPlaylist(name, songs) {
+            //     console.log(`Playlist ${name} contains the following songs:`);
+            //     songs.forEach((song, index) => {
+            //         console.log(`${index + 1}. ${song}`)
+            //     }); 
+            // }
+
+            showProductInfo(name, songs) {
+                console.log(`Playlist ${name} contains the following songs:`);
+                songs.forEach((song, index) => {
+                    console.log(`${index + 1}. ${song}`)
+                });
+            }
+    }
+
+        const myPlaylist = new Playlist()
+
+        myPlaylist.showProductInfo("Chill vibes", ["Khat", "Kesariya", "Love me like you do"])
+
+    </script>
+</body>
+
+</html>

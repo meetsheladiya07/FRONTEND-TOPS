@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Song to Playlist</title>
+</head>
+
+<body>
+    <script>
+
+        class Playlist {
+
+            constructor(name, songs) {
+                this.name = name;
+                this.songs = songs;
+            }
+
+            addSong(song) {
+                this.songs.push(song);
+            }
+
+            displayPlaylist() {
+                console.log(`Playlist ${this.name} contains the following songs:`);
+                songs.forEach((song, index) => {
+                    console.log(`${index + 1}. ${song}`)
+                });
+            }
+        }
+
+        let songs = ["Khat", "Kesariya", "Love me like you do"];
+        const myPlaylist = new Playlist("Chill vibes", songs)
+
+        myPlaylist.displayPlaylist()
+        myPlaylist.addSong("Shape of you")
+        myPlaylist.displayPlaylist()
+
+
+    </script>
+</body>
+
+</html>

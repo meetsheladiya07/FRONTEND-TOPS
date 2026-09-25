@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+</head>
+
+<body>
+    <script>
+        let count = 0;
+
+        class Playlist {
+
+            displayPlaylist(name, songs) {
+                songs.forEach((song, index) => {
+                    count++;
+                });
+
+                console.log(`Total number of songs in the '${name}' playlist: ${count}`);
+
+            }
+
+        }
+
+        const myPlaylist = new Playlist()
+
+        myPlaylist.displayPlaylist("Chill vibes", ["Khat", "Kesariya", "Love me like you do"])
+
+
+    </script>
+</body>
+
+</html>
