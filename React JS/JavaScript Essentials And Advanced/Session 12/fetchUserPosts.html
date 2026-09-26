@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch User Posts</title>
+</head>
+<body>
+
+    <h2>User and Their Posts</h2>
+
+    <script>
+
+        fetch("https://jsonplaceholder.typicode.com/users/2", {
+            method: "GET"
+        })
+
+            .then(res => res.json())
+
+            .then(user => {
+                console.log("User Name:", user.name);
+
+                return fetch("https://jsonplaceholder.typicode.com/posts?userId=" + user.id, {
+                    method: "GET"
+                })
+                    .then(res => res.json())
+                    .then(posts => {
+
+                        console.log("Post Titles:");
+
+                        posts.forEach(post => {
+                            console.log(post.title);
+                        });
+
+                    });
+            })
+
+            .catch(error => {
+                console.log("Error:", error);
+            });
+
+    </script>
+
+</body>
+</html>

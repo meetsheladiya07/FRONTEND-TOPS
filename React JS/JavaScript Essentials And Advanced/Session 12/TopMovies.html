@@ -1,0 +1,41 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch Top Movies</title>
+</head>
+<body>
+
+    <h2>BookMyShow - Trending Movies</h2>
+
+    <script>
+
+        function fetchTopMovies() {
+
+            fetch("https://jsonplaceholder.typicode.com/albums", {
+                method: "GET"
+            })
+
+                .then(res => res.json())
+
+                .then(movies => {
+
+                    console.log("🎬 BookMyShow Trending Movies:");
+
+                    movies.slice(0, 3).forEach((movie, index) => {
+
+                        console.log((index + 1) + ". " + movie.title);
+
+                    });
+                })
+
+                .catch(error => {
+                    console.log("Error fetching movies:", error);
+                });
+        }
+
+        fetchTopMovies();
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch User Emails</title>
+</head>
+<body>
+
+    <h2>User Emails</h2>
+
+    <script>
+
+        fetch("https://jsonplaceholder.typicode.com/users", {
+            method: "GET",
+        })
+
+            .then(res => res.json())
+            .then(users => {
+
+                let emails = users.map(user => user.email);
+                let allEmails = emails.join(", ");
+                alert(allEmails);
+            })
+            .catch(error => {
+                console.log("Error:", error);
+            });
+
+    </script>
+
+</body>
+</html>

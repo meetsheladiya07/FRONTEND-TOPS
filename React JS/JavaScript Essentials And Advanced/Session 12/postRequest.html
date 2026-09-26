@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Send POST Request</title>
+</head>
+
+<body>
+
+    <h2>Send POST Request</h2>
+
+    <script>
+
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title: "My First Movie",
+                body: "This is a trending movie on BookMyShow."
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                console.log(data);
+
+                if ("id" in data) {
+                    console.log("ID property is present:", data.id);
+                } else {
+                    console.log("ID property is not present.");
+                }
+            })
+
+            .catch(error => {
+                console.log("Error:", error);
+            });
+
+    </script>
+
+</body>
+
+</html>

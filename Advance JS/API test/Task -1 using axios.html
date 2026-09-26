@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios data</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        let getUser = async() => {
+            try {
+                let res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+                console.log(res.data);
+            } catch (error) {
+                console.error(error);
+            }
+        }; 
+
+        getUser();
+        
+    </script>
+</body>
+</html>
