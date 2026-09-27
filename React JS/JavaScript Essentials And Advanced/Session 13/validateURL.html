@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validate Spotify URL</title>
+</head>
+<body>
+
+    <h2>Spotify URL Validation</h2>
+
+    <script>
+
+        function validateSpotifyURL(url) {
+
+            if (!url.startsWith("https://open.spotify.com/")) {
+
+                throw new Error("Invalid Spotify URL");
+            }
+
+            console.log("Valid Spotify URL");
+        }
+
+        validateSpotifyURL("https://open.spotify.com/track/12345");
+
+        try {
+            validateSpotifyURL("https://youtube.com/watch?v=123");
+        }
+        catch (error) {
+            console.log(error.message);
+        }
+
+    </script>
+
+</body>
+</html>

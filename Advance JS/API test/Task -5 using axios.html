@@ -11,10 +11,10 @@
     <script>
         let getUser = async() => {
             try {
-                let res = await axios.get('https://dummyjson.com/products');
-                console.log(res.data.products);
-                for(let data of res.data.products){
-                    console.log(data.title);
+                let res = await axios.get('https://gorest.co.in/public/v2/users');
+                console.log(res.data);
+                for(let data of res.data){
+                    console.log(data.name);
                 }
             } catch (error) {
                 console.error(error);

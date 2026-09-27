@@ -9,7 +9,7 @@
 <body>
     
     <script>
-        fetch('https://dummyjson.com/products',{
+        fetch('https://dummyjson.com/users?limit=10',{
             method: 'GET'
         })
         .then((res)=>{
@@ -17,8 +17,8 @@
         })
         .then((res)=>{
             console.log(res)
-            for(let data of res.products){
-                console.log(data.title)
+            for(let data of res.users){
+                console.log(data.firstName)
             }
         })
     </script>

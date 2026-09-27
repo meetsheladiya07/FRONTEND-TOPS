@@ -9,16 +9,16 @@
 <body>
     
     <script>
-        fetch('https://dummyjson.com/products',{
+        fetch('https://randomuser.me/api/?results=10',{
             method: 'GET'
         })
         .then((res)=>{
             return res.json()
         })
         .then((res)=>{
-            console.log(res)
-            for(let data of res.products){
-                console.log(data.title)
+            console.log(res.results)
+            for(let data of res.results){
+                console.log(data.name.first)
             }
         })
     </script>

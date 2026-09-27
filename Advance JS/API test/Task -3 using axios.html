@@ -11,9 +11,9 @@
     <script>
         let getUser = async() => {
             try {
-                let res = await axios.get('https://dummyjson.com/products');
-                console.log(res.data.products);
-                for(let data of res.data.products){
+                let res = await axios.get('https://fakestoreapi.com/products');
+                console.log(res.data);
+                for(let data of res.data){
                     console.log(data.title);
                 }
             } catch (error) {
