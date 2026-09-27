@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Public Playlists</title>
+</head>
+<body>
+
+    <h2>Public Spotify Playlists</h2>
+
+    <script>
+
+        let playlists = [
+            {
+                name: "Top Bollywood Songs",
+                isPublic: true
+            },
+            {
+                name: "My Private Songs",
+                isPublic: false
+            },
+            {
+                name: "Workout Hits",
+                isPublic: true
+            },
+            {
+                name: "Personal Favorites",
+                isPublic: false
+            }
+        ];
+
+        let publicPlaylists = playlists.filter(playlist => playlist.isPublic);
+
+        console.log("Public Playlists:");
+        console.log(publicPlaylists);
+
+    </script>
+
+</body>
+</html>

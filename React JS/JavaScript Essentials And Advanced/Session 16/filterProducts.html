@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Flipkart Products</title>
+</head>
+<body>
+
+    <h2>Flipkart In-Stock Products</h2>
+
+    <script>
+
+        let products = [
+            {
+                name: "Samsung Galaxy Phone",
+                price: 25000,
+                isInStock: true
+            },
+            {
+                name: "HP Laptop",
+                price: 55000,
+                isInStock: false
+            },
+            {
+                name: "Boat Headphones",
+                price: 1500,
+                isInStock: true
+            },
+            {
+                name: "Sony TV",
+                price: 45000,
+                isInStock: false
+            }
+        ];
+
+        let inStockProducts = products.filter(product => product.isInStock);
+
+        console.log("In-Stock Products:");
+        console.log(inStockProducts);
+
+    </script>
+
+</body>
+</html>

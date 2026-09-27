@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Popular YouTube Video</title>
+</head>
+<body>
+
+    <h2>Find Popular YouTube Video</h2>
+
+    <script>
+
+        let videos = [
+            {
+                title: "JavaScript Tutorial",
+                views: 500000
+            },
+            {
+                title: "HTML CSS Full Course",
+                views: 1200000
+            },
+            {
+                title: "Learn JavaScript",
+                views: 2500000
+            },
+            {
+                title: "Web Development",
+                views: 800000
+            }
+        ];
+
+        let popularVideo = videos.find(video => video.views > 1000000);
+
+        console.log("First Video With More Than 1 Million Views:");
+        console.log(popularVideo);
+
+    </script>
+
+</body>
+</html>

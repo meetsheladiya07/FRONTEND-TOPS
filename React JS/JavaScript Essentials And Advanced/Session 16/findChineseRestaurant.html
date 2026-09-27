@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Chinese Restaurant</title>
+</head>
+<body>
+
+    <h2>Find Chinese Restaurant</h2>
+
+    <script>
+
+        let restaurants = [
+            {
+                name: "Pizza Paradise",
+                cuisine: "Italian"
+            },
+            {
+                name: "Dragon Palace",
+                cuisine: "Chinese"
+            },
+            {
+                name: "Spice Garden",
+                cuisine: "Indian"
+            },
+            {
+                name: "China Town",
+                cuisine: "Chinese"
+            }
+        ];
+
+        let chineseRestaurant = restaurants.find(
+            restaurant => restaurant.cuisine === "Chinese"
+        );
+
+        console.log("First Chinese Restaurant:");
+        console.log(chineseRestaurant);
+
+    </script>
+
+</body>
+</html>

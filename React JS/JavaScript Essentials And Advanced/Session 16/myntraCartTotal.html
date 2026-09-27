@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Myntra Cart Total</title>
+</head>
+<body>
+
+
+    <h2>Myntra Cart Total</h2>
+
+    <script>
+
+        let cartItems = [
+            {
+                name: "T-Shirt",
+                price: 799
+            },
+            {
+                name: "Jeans",
+                price: 1499
+            },
+            {
+                name: "Shoes",
+                price: 2499
+            },
+            {
+                name: "Jacket",
+                price: 1999
+            }
+        ];
+
+        let totalPrice = cartItems.map(item => item.price).reduce((total, price) => total + price, 0);
+
+        console.log("Total Myntra Cart Price: ₹" + totalPrice);
+
+    </script>
+
+</body>
+</html>

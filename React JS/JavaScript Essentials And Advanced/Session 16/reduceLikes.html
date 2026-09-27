@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Total Instagram Likes</title>
+</head>
+<body>
+
+    <h2>Total Instagram Likes</h2>
+
+    <script>
+
+        let posts = [
+            {
+                username: "meet",
+                likes: 120
+            },
+            {
+                username: "rahul",
+                likes: 250
+            },
+            {
+                username: "jay",
+                likes: 180
+            },
+            {
+                username: "rohit",
+                likes: 320
+            }
+        ];
+
+        let totalLikes = posts.reduce((total, post) => {
+            return total + post.likes;
+        }, 0);
+
+        console.log("Total Instagram Likes:", totalLikes);
+
+    </script>
+
+</body>
+</html>

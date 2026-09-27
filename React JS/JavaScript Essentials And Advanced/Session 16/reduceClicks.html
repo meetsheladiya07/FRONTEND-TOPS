@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Total Zomato Clicks</title>
+</head>
+<body>
+
+    <h2>Total Zomato Order Clicks</h2>
+
+    <script>
+
+        let orders = [
+            {
+                orderId: 101,
+                clicks: 120
+            },
+            {
+                orderId: 102,
+                clicks: 250
+            },
+            {
+                orderId: 103,
+                clicks: 180
+            },
+            {
+                orderId: 104,
+                clicks: 300
+            }
+        ];
+
+        let totalClicks = orders.reduce((total, order) => {
+            return total + order.clicks;
+        }, 0);
+
+        console.log("Total Clicks:", totalClicks);
+
+    </script>
+
+</body>
+</html>

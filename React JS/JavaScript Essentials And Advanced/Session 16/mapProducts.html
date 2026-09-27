@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Product Details</title>
+</head>
+<body>
+
+    <h2>Flipkart Product Details</h2>
+
+    <script>
+
+        let products = [
+            {
+                name: "Samsung Galaxy Phone",
+                price: 25000
+            },
+            {
+                name: "HP Laptop",
+                price: 55000
+            },
+            {
+                name: "Boat Headphones",
+                price: 1500
+            },
+            {
+                name: "Sony TV",
+                price: 45000
+            }
+        ];
+
+        let productDetails = products.map(product =>
+            "Product: " + product.name + ", Price: ₹" + product.price
+        );
+
+        console.log("Flipkart Products:");
+        console.log(productDetails);
+
+    </script>
+
+</body>
+</html>
