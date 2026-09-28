@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Error Stack Trace</title>
+</head>
+<body>
+
+    <h2>Custom Error Stack Trace</h2>
+    <script>
+
+        /*
+        The error means that an invalid username was provided.
+        The stack trace shows where the Error was created and
+        which line called the function. The problem occurs on
+        the line where the custom Error is thrown.
+        */
+
+        function validateUsername(username) {
+            if (username.length < 3) {
+
+                throw new Error("Username must contain at least 3 characters");
+            }
+
+            return "Valid username";
+        }
+
+        validateUsername("AB");
+    </script>
+
+</body>
+</html>

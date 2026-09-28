@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zomato Order Total</title>
+</head>
+
+<body>
+
+    <h2>Zomato Order Total</h2>
+
+    <script>
+
+        function getOrderTotal(items) {
+
+            let total = 0;
+
+            for (let item of items) {
+
+                if (item.price < 0) {
+                    throw new Error("Invalid item price");
+                }
+
+                total = total + item.price;
+            }
+
+            return total;
+        }
+
+        let items = [
+            {
+                name: "Pizza",
+                price: 250
+            },
+            {
+                name: "Burger",
+                price: 150
+            },
+            {
+                name: "Cold Drink",
+                price: -50
+            }
+        ];
+
+        try {
+
+            let total = getOrderTotal(items);
+
+            console.log("Total Order Amount: ₹" + total);
+
+        }
+        catch (error) {
+
+            console.log("Sorry, there is an issue with your order: " + error.message);
+        }
+
+    </script>
+
+</body>
+
+</html>

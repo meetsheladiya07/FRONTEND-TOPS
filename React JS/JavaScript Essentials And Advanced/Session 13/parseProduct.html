@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parse Product JSON</title>
+</head>
+<body>
+
+
+    <h2>Flipkart Product JSON Parsing</h2>
+
+    <script>
+
+        let productData = '{"name":"Shoes","price":999}';
+
+        try {
+
+            let product = JSON.parse(productData);
+
+            console.log("Product:", product);
+
+        }
+        catch (error) {
+
+            console.log("Invalid product data");
+
+        }
+        finally {
+
+            console.log("Parsing attempt finished");
+
+        }
+
+    </script>
+
+</body>
+</html>

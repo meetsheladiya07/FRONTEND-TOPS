@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validate Username</title>
+</head>
+<body>
+
+    <h2>Username Validation</h2>
+
+    <script>
+
+        function validateUsername(username) {
+
+            if (!/^[A-Za-z0-9]+$/.test(username)) {
+
+                throw new Error("Invalid Username");
+            }
+
+            console.log("Valid Username:", username);
+        }
+
+        try {
+            validateUsername("Meet@123");
+        }
+        catch (error) {
+            console.log(error.message);
+        }
+
+    </script>
+
+</body>
+</html>

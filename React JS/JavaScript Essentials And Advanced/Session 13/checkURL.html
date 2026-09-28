@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Spotify Playlist URL</title>
+</head>
+<body>
+
+    <h2>Spotify Playlist URL Validation</h2>
+
+    <script>
+
+        function checkPlaylistURL(url) {
+
+            if (!url.startsWith("https://open.spotify.com/")) {
+
+                throw new Error("Invalid Spotify URL");
+            }
+
+            console.log("Valid Spotify URL");
+        }
+
+        try {
+
+            checkPlaylistURL("https://youtube.com/playlist/123");
+
+        }
+        catch (error) {
+
+            console.log(error.message);
+
+        }
+        finally {
+
+            console.log("Validation complete");
+
+        }
+
+    </script>
+
+</body>
+</html>
