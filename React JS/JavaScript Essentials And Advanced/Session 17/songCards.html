@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Cards</title>
+</head>
+<body>
+
+    <h2>My Songs</h2>
+
+    <div id="songContainer"></div>
+
+    <script>
+
+        let songs = [
+            "Shape of You",
+            "Blinding Lights",
+            "Believer",
+            "Perfect",
+            "Levitating"
+        ];
+
+        let songContainer = document.getElementById("songContainer");
+
+        songs.forEach(song => {
+
+            let card = document.createElement("div");
+
+            card.innerHTML = `
+                <span>${song}</span>
+                <button class="delete-btn">X</button>
+            `;
+
+            songContainer.appendChild(card);
+        });
+
+        songContainer.addEventListener("click", function(event) {
+
+            if (event.target.classList.contains("delete-btn")) {
+
+                event.target.parentElement.remove();
+            }
+        });
+
+    </script>
+
+</body>
+</html>
