@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Notification Feed</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .notification-feed {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .notification {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: opacity 0.5s ease;
+        }
+
+        .notification img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .notification-content {
+            flex: 1;
+        }
+
+        .notification-content h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .notification-content p {
+            margin: 5px 0 0;
+            color: gray;
+        }
+
+        .dismiss-btn {
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .add-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>YouTube Notifications</h2>
+
+    <button class="add-btn" id="addNotification">
+        Load New Notification
+    </button>
+
+    <div class="notification-feed" id="notificationFeed">
+
+        <div class="notification">
+
+            <img src="https://cdn.pixabay.com/photo/2023/02/03/05/10/colorful-7764167_1280.jpg" alt="Channel">
+
+            <div class="notification-content">
+                <h3>New video from Tech Channel</h3>
+                <p>2 minutes ago</p>
+            </div>
+
+            <button class="dismiss-btn">Dismiss</button>
+
+        </div>
+
+
+        <div class="notification">
+
+            <img src="https://cdn.pixabay.com/photo/2023/02/03/05/13/youtube-background-7764176_1280.jpg" alt="Channel">
+
+            <div class="notification-content">
+                <h3>Someone liked your comment</h3>
+                <p>10 minutes ago</p>
+            </div>
+
+            <button class="dismiss-btn">Dismiss</button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const notificationFeed =
+            document.getElementById("notificationFeed");
+
+        const addNotification =
+            document.getElementById("addNotification");
+
+        let notificationNumber = 1;
+
+
+        notificationFeed.addEventListener("click", function(event) {
+
+            if (event.target.classList.contains("dismiss-btn")) {
+
+                const notification =
+                    event.target.closest(".notification");
+
+                notification.classList.add("fade-out");
+
+                setTimeout(function() {
+                    notification.remove();
+                }, 500);
+            }
+
+        });
+
+
+        addNotification.addEventListener("click", function() {
+
+            const notification =
+                document.createElement("div");
+
+            notification.classList.add("notification");
+
+            notification.innerHTML = `
+                <img src="https://cdn.pixabay.com/photo/2023/02/03/04/51/swirls-7764126_1280.jpg"
+                     alt="Channel">
+
+                <div class="notification-content">
+                    <h3>
+                        New notification ${notificationNumber}
+                    </h3>
+
+                    <p>Just now</p>
+                </div>
+
+                <button class="dismiss-btn">
+                    Dismiss
+                </button>
+            `;
+
+            notificationFeed.appendChild(notification);
+
+            notificationNumber++;
+
+        });
+
+    </script>
+
+</body>
+</html>

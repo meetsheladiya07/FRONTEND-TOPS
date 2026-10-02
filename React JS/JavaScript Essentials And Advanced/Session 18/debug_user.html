@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug User Stack Trace</title>
+</head>
+<body>
+
+    <h2>User Debugging</h2>
+
+    <script>
+
+        function getUser() {
+            return fetchUser();
+        }
+
+
+        function fetchUser() {
+
+            return JSON.parse(undefined);
+        }
+
+        getUser();
+
+    </script>
+
+</body>
+</html>
+<!--The error means that JSON.parse() received undefined instead of valid JSON. To fix it,
+ make sure valid JSON data is passed to JSON.parse() before parsing it.-->
+
+ <!--n my own words, the error means that I tried to convert invalid or missing data into JSON. 
+ I can fix it by checking that the data exists and contains valid JSON before using JSON.parse().-->

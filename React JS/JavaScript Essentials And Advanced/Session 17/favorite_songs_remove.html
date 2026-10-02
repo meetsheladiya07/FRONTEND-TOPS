@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Songs Remove</title>
+</head>
+<body>
+
+    <h2>My Favorite Songs</h2>
+
+    <ul id="songList">
+        <li>
+            Believer - Imagine Dragons
+            <button class="removeBtn">Remove</button>
+        </li>
+
+        <li>
+            Perfect - Ed Sheeran
+            <button class="removeBtn">Remove</button>
+        </li>
+
+        <li>
+            Shape of You - Ed Sheeran
+            <button class="removeBtn">Remove</button>
+        </li>
+
+        <li>
+            Faded - Alan Walker
+            <button class="removeBtn">Remove</button>
+        </li>
+    </ul>
+
+    <script>
+        const songList = document.getElementById("songList");
+
+        songList.addEventListener("click", function(event) {
+
+            if (event.target.classList.contains("removeBtn")) {
+
+                event.target.parentElement.remove();
+            }
+        });
+    </script>
+
+</body>
+</html>

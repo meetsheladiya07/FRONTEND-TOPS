@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Payment Stack Trace</title>
+</head>
+<body>
+
+    <h2>Payment Debugging</h2>
+
+    <script>
+
+        function placeOrder() {
+            confirmOrder();
+        }
+
+
+        function confirmOrder() {
+            processPayment();
+        }
+
+
+        function processPayment() {
+
+            throw new Error("Payment failed");
+        }
+
+
+        placeOrder();
+
+    </script>
+
+</body>
+</html>

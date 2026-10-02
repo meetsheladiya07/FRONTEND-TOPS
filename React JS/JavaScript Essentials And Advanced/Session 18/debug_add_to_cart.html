@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Add To Cart</title>
+</head>
+<body>
+
+    <h2>Add To Cart Debugging</h2>
+
+    <button onclick="addToCart('Pizza', 0)">
+        Add Pizza
+    </button>
+
+    <script>
+
+        function addToCart(item, quantity) {
+
+            console.log("Item:", item);
+            console.log("Quantity:", quantity);
+
+            if (quantity === 0) {
+
+                throw new Error("Quantity cannot be zero");
+
+            }
+
+            console.log(item + " added to cart.");
+        }
+
+
+        addToCart("Pizza", 0);
+
+    </script>
+
+</body>
+</html>

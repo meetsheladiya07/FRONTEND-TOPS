@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Friend Loop</title>
+</head>
+<body>
+
+    <h2>Friend List</h2>
+
+    <button onclick="showFriends()">
+        Show Friends
+    </button>
+
+    <script>
+
+        function showFriends() {
+
+            // Array of friends
+            const friends = [
+                "Meet",
+                "Rahul",
+                "Priya",
+                "Jay",
+                "Amit"
+            ];
+
+            // Loop through friends
+            for (let i = 0; i < friends.length; i++) {
+
+                // Set breakpoint on this line
+                console.log(friends[i]);
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Card Remove</title>
+</head>
+<body>
+
+    <div id="cards">
+
+        <div class="card">
+            <h3>Product 1</h3>
+            <button class="remove-btn">✕</button>
+        </div>
+
+        <div class="card">
+            <h3>Product 2</h3>
+            <button class="remove-btn">✕</button>
+        </div>
+
+    </div>
+
+    <button id="addCard">Add Card</button>
+
+
+    <script>
+
+        const cards = document.getElementById("cards");
+
+        cards.addEventListener("click", function(event) {
+
+            if (event.target.classList.contains("remove-btn")) {
+
+                event.target.parentElement.remove();
+            }
+
+        });
+
+
+        document.getElementById("addCard").addEventListener("click", function() {
+
+            const card = document.createElement("div");
+
+            card.classList.add("card");
+
+            card.innerHTML = `
+                <h3>New Product</h3>
+                <button class="remove-btn">✕</button>
+            `;
+
+            cards.appendChild(card);
+        });
+
+    </script>
+
+</body>
+</html>

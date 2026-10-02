@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Shopping Cart</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .cart {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product-card {
+            width: 220px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .remove {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            border: none;
+            background: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>My Shopping Cart</h2>
+
+    <!-- Parent Cart -->
+    <div class="cart" id="cart">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <button class="remove">✕</button>
+
+            <img src="https://cdn.pixabay.com/photo/2020/12/14/09/46/smartphone-5830473_1280.png" alt="Mobile">
+
+            <h3>Smartphone</h3>
+            <p>6GB RAM, 128GB Storage</p>
+            <p class="price">₹15,999</p>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <button class="remove">✕</button>
+
+            <img src="https://cdn.pixabay.com/photo/2016/01/09/07/44/headphone-1129896_1280.png" alt="Headphones">
+
+            <h3>Wireless Headphones</h3>
+            <p>Bluetooth 5.0</p>
+            <p class="price">₹1,999</p>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <button class="remove">✕</button>
+
+            <img src="https://cdn.pixabay.com/photo/2025/10/21/17/10/smartwatch-9907990_1280.jpg        " alt="Watch">
+
+            <h3>Smart Watch</h3>
+            <p>Fitness & Health Tracking</p>
+            <p class="price">₹2,499</p>
+        </div>
+
+    </div>
+
+    <script>
+
+        const cart = document.getElementById("cart");
+
+        cart.addEventListener("click", function(event) {
+
+            if (event.target.classList.contains("remove")) {
+
+                const card = event.target.parentElement;
+
+                // Remove only that card
+                card.remove();
+            }
+        });
+
+    </script>
+
+</body>
+</html>
