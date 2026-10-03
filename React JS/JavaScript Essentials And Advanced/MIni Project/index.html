@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Playlist Link Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Playlist Link Manager</h1>
+
+        <!-- Theme Button -->
+        <button id="themeBtn" onclick="toggleTheme()">
+            Toggle Theme
+        </button>
+
+        <!-- Playlist Form -->
+        <form id="playlistForm">
+
+            <input
+                type="text"
+                id="playlistName"
+                placeholder="Enter playlist name"
+            >
+
+            <input
+                type="text"
+                id="playlistUrl"
+                placeholder="Enter Spotify or YouTube URL"
+            >
+
+            <!-- URL Error Message -->
+            <p id="urlError" class="error"></p>
+
+            <button type="submit" id="submitBtn">
+                Add Playlist
+            </button>
+
+            <button
+                type="button"
+                id="cancelBtn"
+                onclick="cancelEdit()"
+                class="cancel-btn"
+            >
+                Cancel
+            </button>
+
+        </form>
+
+        <hr>
+
+        <h2>My Playlists</h2>
+
+        <!-- Playlist List -->
+        <div id="playlistList"></div>
+
+        <hr>
+
+        <!-- Instagram Validation -->
+        <h2>Instagram Profile</h2>
+
+        <input
+            type="text"
+            id="instagram"
+            placeholder="Enter Instagram profile URL"
+        >
+
+        <p id="instagramError" class="error"></p>
+
+        <button onclick="validateInstagram()">
+            Validate Instagram
+        </button>
+
+    </div>
+
+    <script src="playlist.js"></script>
+
+</body>
+</html>
