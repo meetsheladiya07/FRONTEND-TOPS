@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Restaurant Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 9px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 12px;
+            border-radius: 8px;
+        }
+
+        .edit {
+            background: orange;
+            border: none;
+        }
+
+        .delete {
+            background: red;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Zomato Restaurant Manager</h1>
+
+        <form id="restaurantForm">
+            <input type="text" id="restaurantName" placeholder="Restaurant Name" required>
+            <input type="text" id="cuisine" placeholder="Cuisine" required>
+            <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" step="0.1" required>
+            <button type="submit" id="restaurantSubmit">Add Restaurant</button>
+        </form>
+
+        <h2>Restaurant List</h2>
+        <div id="restaurantList"></div>
+    </div>
+
+    <script>
+        let restaurants = [];
+        let editIndex = -1;
+
+        const form = document.getElementById("restaurantForm");
+        const list = document.getElementById("restaurantList");
+        const submitButton = document.getElementById("restaurantSubmit");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("restaurantName").value;
+            const cuisine = document.getElementById("cuisine").value;
+            const rating = document.getElementById("rating").value;
+
+            const restaurant = {
+                name: name,
+                cuisine: cuisine,
+                rating: rating
+            };
+
+            if (editIndex === -1) {
+                restaurants.push(restaurant);
+            } else {
+                restaurants[editIndex] = restaurant;
+                editIndex = -1;
+                submitButton.textContent = "Add Restaurant";
+            }
+
+            displayRestaurants();
+            form.reset();
+        });
+
+        function displayRestaurants() {
+            list.innerHTML = "";
+
+            restaurants.forEach(function (restaurant, index) {
+                const div = document.createElement("div");
+                div.className = "item";
+
+                div.innerHTML = `
+            <strong>${restaurant.name}</strong>
+            <p>Cuisine: ${restaurant.cuisine}</p>
+            <p>Rating: ${restaurant.rating}</p>
+            <button class="edit" onclick="editRestaurant(${index})">Edit</button>
+            <button class="delete" onclick="deleteRestaurant(${index})">Delete</button>
+        `;
+
+                list.appendChild(div);
+            });
+        }
+
+        function editRestaurant(index) {
+            document.getElementById("restaurantName").value = restaurants[index].name;
+            document.getElementById("cuisine").value = restaurants[index].cuisine;
+            document.getElementById("rating").value = restaurants[index].rating;
+
+            editIndex = index;
+            submitButton.textContent = "Update Restaurant";
+        }
+
+        function deleteRestaurant(index) {
+            restaurants.splice(index, 1);
+            displayRestaurants();
+        }
+    </script>
+</body>
+
+</html>

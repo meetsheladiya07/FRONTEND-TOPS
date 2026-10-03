@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Playlist Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            padding: 9px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 12px;
+            border-radius: 8px;
+        }
+
+        .edit {
+            background: orange;
+            border: none;
+        }
+
+        .delete {
+            background: red;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Spotify Playlist Manager</h1>
+
+        <form id="playlistForm">
+            <input type="text" id="playlistName" placeholder="Playlist Name" required>
+            <input type="text" id="playlistDescription" placeholder="Playlist Description" required>
+            <button type="submit" id="playlistSubmit">Add Playlist</button>
+        </form>
+
+        <h2>Playlist List</h2>
+        <div id="playlistList"></div>
+    </div>
+
+    <script>
+        let playlists = [];
+        let editIndex = -1;
+
+        const form = document.getElementById("playlistForm");
+        const list = document.getElementById("playlistList");
+        const submitButton = document.getElementById("playlistSubmit");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("playlistName").value;
+            const description = document.getElementById("playlistDescription").value;
+
+            const playlist = {
+                name: name,
+                description: description
+            };
+
+            if (editIndex === -1) {
+                playlists.push(playlist);
+            } else {
+                playlists[editIndex] = playlist;
+                editIndex = -1;
+                submitButton.textContent = "Add Playlist";
+            }
+
+            displayPlaylists();
+            form.reset();
+        });
+
+        function displayPlaylists() {
+            list.innerHTML = "";
+
+            playlists.forEach(function (playlist, index) {
+                const div = document.createElement("div");
+                div.className = "item";
+
+                div.innerHTML = `
+            <strong>${playlist.name}</strong>
+            <p>${playlist.description}</p>
+            <button class="edit" onclick="editPlaylist(${index})">Edit</button>
+            <button class="delete" onclick="deletePlaylist(${index})">Delete</button>
+        `;
+
+                list.appendChild(div);
+            });
+        }
+
+        function editPlaylist(index) {
+            document.getElementById("playlistName").value = playlists[index].name;
+            document.getElementById("playlistDescription").value = playlists[index].description;
+
+            editIndex = index;
+            submitButton.textContent = "Update Playlist";
+        }
+
+        function deletePlaylist(index) {
+            playlists.splice(index, 1);
+            displayPlaylists();
+        }
+    </script>
+</body>
+
+</html>
