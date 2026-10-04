@@ -20,11 +20,8 @@ function addPlaylistLink(linkObj) {
     displayPlaylists();
 }
 
-
-
 // Q3
 // Playlist with name and URL
-
 
 function addNewPlaylist() {
 
@@ -39,7 +36,6 @@ function addNewPlaylist() {
     addPlaylistLink(linkObj);
 }
 
-
 // Q4 & Q5
 // validateURL()
 
@@ -51,8 +47,6 @@ function validateURL(url) {
         url.includes(".")
     );
 }
-
-
 
 // Q6
 // editPlaylistLink()
@@ -70,8 +64,6 @@ function editPlaylistLink(index, newLinkObj) {
 
     displayPlaylists();
 }
-
-
 
 // Q7, Q8 & Q12
 // toggleTheme()
@@ -102,7 +94,6 @@ function applySavedTheme() {
         document.body.classList.add("dark-mode");
     }
 }
-
 
 // Q9
 // deletePlaylistLink()
@@ -181,7 +172,6 @@ function validateInstagram() {
     }
 }
 
-
 // Q15
 // Spotify / YouTube validation
 
@@ -237,7 +227,6 @@ function validatePlaylistURL() {
                 return;
             }
 
-
             myPlaylists.forEach(function (playlist, index) {
 
                 let card = document.createElement("div");
@@ -277,7 +266,6 @@ function validatePlaylistURL() {
             });
         }
 
-
         function startEdit(index) {
 
             let playlist = myPlaylists[index];
@@ -304,8 +292,6 @@ function validatePlaylistURL() {
             ).style.display = "inline-block";
         }
 
-
-
         function cancelEdit() {
 
             editingIndex = -1;
@@ -329,8 +315,6 @@ function validatePlaylistURL() {
                 "urlError"
             ).textContent = "";
         }
-
-
 
         document.getElementById(
             "playlistForm"
