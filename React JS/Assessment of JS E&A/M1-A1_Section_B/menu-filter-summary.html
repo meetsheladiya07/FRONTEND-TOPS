@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Filter & Summary</title>
+</head>
+<body>
+
+    <h1>Menu Filter & Summary</h1>
+
+    <script>
+
+        const dishes = [
+            {
+                name: "Paneer Tikka",
+                price: 180,
+                category: "Food",
+                isVegetarian: true
+            },
+            {
+                name: "Pizza Margherita",
+                price: 250,
+                category: "Food",
+                isVegetarian: true
+            },
+            {
+                name: "Veg Sandwich",
+                price: 120,
+                category: "Food",
+                isVegetarian: true
+            },
+            {
+                name: "Masala Dosa",
+                price: 150,
+                category: "Food",
+                isVegetarian: true
+            },
+            {
+                name: "Cold Coffee",
+                price: 100,
+                category: "Beverage",
+                isVegetarian: true
+            },
+            {
+                name: "Chicken Biryani",
+                price: 220,
+                category: "Food",
+                isVegetarian: false
+            }
+        ];
+
+        const vegetarianDishes = dishes.filter(dish => dish.isVegetarian);
+
+        console.log("Vegetarian Dishes Count:", vegetarianDishes.length);
+        console.log("Vegetarian Dishes:", vegetarianDishes);
+
+
+        const formattedMenu = dishes.map(
+            dish => `${dish.name} – Rs ${dish.price}`
+        );
+
+        console.log("Formatted Menu:", formattedMenu);
+
+
+        const totalPrice = dishes.reduce(
+            (total, dish) => total + dish.price,
+            0
+        );
+
+        console.log("Total Price: Rs", totalPrice);
+
+    </script>
+
+</body>
+</html>

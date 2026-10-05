@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Order Form</title>
+</head>
+<body>
+
+    <h1>Live Order Form</h1>
+
+    <form id="orderForm">
+
+        <label for="dishName">Dish Name:</label>
+        <input type="text" id="dishName" placeholder="Enter dish name">
+
+        <br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="Enter quantity" min="1">
+
+        <br><br>
+
+        <button type="submit" id="addButton">Add to Cart</button>
+
+        <p id="errorMessage"></p>
+
+    </form>
+
+    <h2>Cart</h2>
+
+    <ul id="cartList"></ul>
+
+
+    <script>
+
+        const orderForm = document.getElementById("orderForm");
+        const dishName = document.getElementById("dishName");
+        const quantity = document.getElementById("quantity");
+        const errorMessage = document.getElementById("errorMessage");
+        const cartList = document.getElementById("cartList");
+
+        orderForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = dishName.value.trim();
+            const qty = quantity.value.trim();
+
+            errorMessage.textContent = "";
+
+            if (name === "" || qty === "") {
+                errorMessage.textContent = "Please enter dish name and quantity.";
+                return;
+            }
+
+            const listItem = document.createElement("li");
+
+            listItem.textContent = `${name} - Quantity: ${qty}`;
+
+            cartList.appendChild(listItem);
+
+            dishName.value = "";
+            quantity.value = "";
+
+            dishName.focus();
+        });
+
+    </script>
+
+</body>
+</html>
