@@ -1,0 +1,22 @@
+.profile {
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.profile h2 {
+    margin: 10px 0;
+}
+
+.profile p {
+    color: #666;
+}
